@@ -97,7 +97,7 @@ export default function Home() {
         <span className="audio-bars" aria-hidden="true"><i /><i /><i /><i /></span>
         <span className="audio-label">
           <small>{audioState === 'blocked' ? 'Sound is ready' : audioState === 'playing' ? 'Now playing' : 'Tony Clyburn audio'}</small>
-          <strong>{audioState === 'playing' ? 'Pause intro' : audioState === 'ended' ? 'Replay intro' : 'Play Tony&apos;s intro'}</strong>
+          <strong>{audioState === 'playing' ? 'Pause intro' : audioState === 'ended' ? 'Replay intro' : 'Play intro'}</strong>
         </span>
       </button>
 
