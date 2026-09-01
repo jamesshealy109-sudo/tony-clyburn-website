@@ -212,6 +212,7 @@ h2 em span { color: var(--blue); font-size: .5em; letter-spacing: -.04em; vertic
 .contact-form::before { top: 9px; left: 9px; border-top: 3px solid var(--rust); border-left: 3px solid var(--rust); }
 .contact-form::after { right: 9px; bottom: 9px; border-right: 3px solid var(--rust); border-bottom: 3px solid var(--rust); }
 .form-heading { display: flex; justify-content: space-between; margin-bottom: 32px; padding-bottom: 20px; border-bottom: 2px solid var(--navy); font-family: Arial, Helvetica, sans-serif; font-size: .7rem; letter-spacing: .15em; }
+.form-intro { max-width: 580px; margin: -10px 0 28px; color: #555d64; font-size: 1rem; line-height: 1.55; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .contact-form label { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; font-family: Arial, Helvetica, sans-serif; font-size: .62rem; font-weight: 900; letter-spacing: .11em; text-transform: uppercase; }
 .contact-form input, .contact-form textarea { width: 100%; border: 1px solid #bfc0b8; border-radius: 0; outline: 0; background: #fffdf8; color: var(--navy); padding: 14px 15px; font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; line-height: 1.4; text-transform: none; }

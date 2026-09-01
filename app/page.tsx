@@ -220,9 +220,9 @@ export default function Home() {
           <div className="contact-signal" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
           <div className="section-shell contact-grid">
             <div className="contact-copy">
-              <p className="section-label">04 / Start here</p>
-              <h2>HOW CAN<br /><em>WE HELP?</em></h2>
-              <p>Tell us what you care about, who needs to hear it, and what a good outcome looks like.</p>
+              <p className="section-label">04 / Why Tony</p>
+              <h2>WHY WORK<br /><em>WITH TONY?</em></h2>
+              <p>Because a voice can only carry what it understands. Tony brings judgment, warmth, and the kind of care that makes people believe what they hear. He loves the work—and wants to know why you love yours.</p>
               <span className="slogan-stamp contact-signature">AT MY JOB AND LOVING IT™</span>
               <div className="direct-contact">
                 <a href="tel:+18032919844">803.291.9844</a>
@@ -231,16 +231,17 @@ export default function Home() {
             </div>
 
             <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-heading"><strong>LET&apos;S GET STARTED</strong><span>↗</span></div>
+              <div className="form-heading"><strong>TELL ME WHY YOU LOVE THE WORK</strong><span>↗</span></div>
+              <p className="form-intro">The best partnerships start with caring. Tell Tony what makes your work worth showing up for.</p>
               <div className="form-row">
                 <label>Your name<input name="name" autoComplete="name" required /></label>
                 <label>Organization<input name="organization" autoComplete="organization" /></label>
               </div>
               <label>Email<input type="email" name="email" autoComplete="email" required /></label>
-              <label>What do you care about?<textarea name="message" rows={6} placeholder="Tell us about the project, the audience, and what matters most." required /></label>
-              <button className="button form-submit" type="submit">Send the signal <span>↗</span></button>
+              <label>What do you love about what you do?<textarea name="message" rows={6} placeholder="Tell Tony what makes the work matter to you, who it helps, and why it deserves to be heard." required /></label>
+              <button className="button form-submit" type="submit">Let&apos;s do good together <span>↗</span></button>
               <p className={submitted ? 'form-note success' : 'form-note'} aria-live="polite">
-                {submitted ? 'Thank you. This preview form is ready to be connected to Tony’s inbox.' : 'Preview form—delivery will be connected before launch.'}
+                {submitted ? 'Thank you for sharing what drives you. This preview form is ready to be connected to Tony’s inbox.' : 'Preview form—delivery will be connected before launch.'}
               </p>
             </form>
           </div>
