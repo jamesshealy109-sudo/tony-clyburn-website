@@ -118,7 +118,7 @@ export default function Home() {
                 <a className="text-link" href="#voice">Hear what matters <span>↓</span></a>
               </div>
               <div className="graffiti-mark graffiti-hero">
-                <Image src={`${basePath}/images/tony-graffiti-slogan.png`} alt="At My Job and Loving It, trademark" width={1774} height={887} sizes="(max-width: 600px) 80vw, 390px" />
+                <Image src={`${basePath}/images/tony-graffiti-slogan-v2.png`} alt="At My Job and Loving It, trademark" width={1774} height={887} sizes="(max-width: 600px) 86vw, 410px" />
               </div>
             </div>
 
@@ -195,14 +195,14 @@ export default function Home() {
           <div className="civic-overlay">
             <p>ROOTED HERE.<br />READY FOR<br /><em>WHAT&apos;S NEXT.</em></p>
           </div>
-          <div className="civic-graffiti" aria-hidden="true"><Image src={`${basePath}/images/tony-graffiti-slogan.png`} alt="" width={1774} height={887} /></div>
+          <div className="civic-graffiti" aria-hidden="true"><Image src={`${basePath}/images/tony-graffiti-slogan-v2.png`} alt="" width={1774} height={887} /></div>
           <div className="civic-labels" aria-hidden="true"><span>COLUMBIA / SOUTH CAROLINA</span><span>AT MY JOB AND LOVING IT™</span></div>
           <blockquote>“Whatever your project, we can do good together.”</blockquote>
         </section>
 
         <section className="pledge-section" id="pledge">
           <div className="pledge-signal" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
-          <div className="pledge-graffiti" aria-hidden="true"><Image src={`${basePath}/images/tony-graffiti-slogan.png`} alt="" width={1774} height={887} /></div>
+          <div className="pledge-graffiti" aria-hidden="true"><Image src={`${basePath}/images/tony-graffiti-slogan-v2.png`} alt="" width={1774} height={887} /></div>
           <div className="section-shell pledge-grid">
             <div className="pledge-title">
               <p className="section-label">03 / A pledge to our partners</p>
@@ -252,7 +252,7 @@ export default function Home() {
       <footer>
         <div className="footer-main">
           <a className="wordmark" href="#top"><strong>TONY CLYBURN</strong><span>AT MY JOB AND LOVING IT™</span></a>
-          <div className="footer-tagline"><span className="footer-graffiti" aria-hidden="true"><Image src={`${basePath}/images/tony-graffiti-slogan.png`} alt="" width={1774} height={887} /></span><span>Crisp. Clear. Midwestern resonance.</span></div>
+          <div className="footer-tagline"><span className="footer-graffiti" aria-hidden="true"><Image src={`${basePath}/images/tony-graffiti-slogan-v2.png`} alt="" width={1774} height={887} /></span><span>Crisp. Clear. Midwestern resonance.</span></div>
           <div className="socials">
             <a href="https://facebook.com/TonyClyburnSC" target="_blank" rel="noreferrer">Facebook ↗</a>
             <a href="https://twitter.com/myjobandlovinit" target="_blank" rel="noreferrer">X / Twitter ↗</a>

@@ -75,7 +75,7 @@ h1 em { margin-top: .12em; color: var(--navy); font-size: .58em; font-style: nor
 .hero-lede { max-width: 680px; margin: 30px 0 0; color: #4b5158; font-size: clamp(1.2rem, 1.8vw, 1.7rem); line-height: 1.5; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-top: 35px; }
 .graffiti-mark img, .civic-graffiti img, .pledge-graffiti img, .footer-graffiti img { display: block; width: 100%; height: auto; object-fit: contain; }
-.graffiti-hero { width: clamp(250px, 29vw, 370px); margin: 20px 0 -10px -8px; filter: drop-shadow(7px 8px 0 rgba(169,75,53,.2)); transform: rotate(-2deg); }
+.graffiti-hero { width: clamp(280px, 31vw, 410px); margin: 20px 0 -10px -8px; filter: drop-shadow(6px 7px 0 rgba(169,75,53,.18)); transform: rotate(-1deg); }
 .button { min-height: 54px; display: inline-flex; align-items: center; justify-content: center; gap: 24px; padding: 0 22px; border: 0; font-family: Arial, Helvetica, sans-serif; font-size: .72rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
 .button-primary { background: var(--navy); color: var(--paper); box-shadow: 7px 7px 0 var(--rust); }
 .button-primary:hover { background: var(--rust); box-shadow-color: var(--navy); }
@@ -167,7 +167,7 @@ h2 em span { color: var(--blue); font-size: .5em; letter-spacing: -.04em; vertic
 .civic-overlay em { color: #b9d0e8; font-style: normal; }
 .civic-labels { position: absolute; z-index: 3; top: 30px; left: max(32px, calc((100vw - 1340px) / 2)); right: max(32px, calc((100vw - 1340px) / 2)); display: flex; justify-content: space-between; color: rgba(255,255,255,.86); font-family: Arial, Helvetica, sans-serif; font-size: .5rem; font-weight: 900; letter-spacing: .2em; }
 .civic-labels span { padding: 9px 12px; border: 1px solid rgba(255,255,255,.42); background: rgba(16,29,45,.5); backdrop-filter: blur(6px); }
-.civic-graffiti { position: absolute; z-index: 3; left: max(32px, calc((100vw - 1340px) / 2)); bottom: 25px; width: min(31vw, 400px); filter: drop-shadow(7px 8px 0 rgba(16,29,45,.55)); transform: rotate(-4deg); }
+.civic-graffiti { position: absolute; z-index: 3; left: max(32px, calc((100vw - 1340px) / 2)); bottom: 25px; width: min(33vw, 430px); filter: drop-shadow(7px 8px 0 rgba(16,29,45,.5)); transform: rotate(-2deg); }
 .civic-section blockquote { position: absolute; z-index: 3; right: max(32px, calc((100vw - 1340px) / 2)); bottom: 42px; width: min(490px, calc(100% - 64px)); margin: 0; padding: 27px 30px; border-left: 6px solid var(--rust); background: var(--paper); color: var(--navy); font-size: clamp(1.2rem, 2vw, 1.75rem); font-style: italic; line-height: 1.35; box-shadow: 12px 12px 0 var(--rust); }
 
 .pledge-section { position: relative; overflow: hidden; padding: 145px 0; background-color: var(--navy); background-image: radial-gradient(circle at 75% 18%, rgba(111,150,199,.13) 0 2px, transparent 2.5px); background-size: 24px 24px; color: var(--paper); }
@@ -227,7 +227,7 @@ footer { padding: 58px max(32px,4vw) 28px; background: #0a1421; color: var(--pap
 .footer-main { width: min(1340px, 100%); display: grid; grid-template-columns: 1fr auto auto; gap: 45px; align-items: center; margin: 0 auto 50px; }
 .footer-main p { margin: 0; color: #929a9f; font-style: italic; }
 .footer-tagline { display: flex; flex-direction: column; gap: 2px; color: #929a9f; font-style: italic; }
-.footer-graffiti { display: block; width: 215px; margin: -28px 0 -21px -12px; filter: drop-shadow(4px 5px 0 rgba(169,75,53,.18)); transform: rotate(-2deg); }
+.footer-graffiti { display: block; width: 238px; margin: -28px 0 -21px -12px; filter: drop-shadow(4px 5px 0 rgba(169,75,53,.16)); transform: rotate(-1deg); }
 .footer-tagline > span:last-child { font-size: .95rem; }
 .socials { display: flex; align-items: center; gap: 22px; font-family: Arial, Helvetica, sans-serif; font-size: .62rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
 .socials a:hover { color: var(--blue); }
