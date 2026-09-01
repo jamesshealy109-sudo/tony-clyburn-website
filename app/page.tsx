@@ -134,7 +134,7 @@ export default function Home() {
         </section>
 
         <div className="resonance-bar" aria-label="Tony Clyburn voice qualities">
-          <span className="resonance-graffiti" aria-hidden="true"><Image src={`${basePath}/images/tony-graffiti-slogan.png`} alt="" width={1774} height={887} /></span><b>●</b><span>SINCERE</span><b>●</b><span>COLLABORATIVE</span><b>●</b><span>RESILIENT</span><b>●</b><span>HUMAN</span><b>●</b><span className="resonance-graffiti" aria-hidden="true"><Image src={`${basePath}/images/tony-graffiti-slogan.png`} alt="" width={1774} height={887} /></span>
+          <strong className="resonance-signature">AT MY JOB AND LOVING IT™</strong><b>●</b><span>SINCERE</span><b>●</b><span>COLLABORATIVE</span><b>●</b><span>RESILIENT</span><b>●</b><span>HUMAN</span>
         </div>
 
         <section className="voice-section" id="voice">
@@ -155,13 +155,12 @@ export default function Home() {
             ))}
           </div>
           <div className="section-shell brag-line">
-            <div><span className="brag-graffiti" aria-hidden="true"><Image src={`${basePath}/images/tony-graffiti-slogan.png`} alt="" width={1774} height={887} /></span><p>We brag about our partners every day.</p></div>
+            <div><span className="brag-kicker">AT MY JOB AND LOVING IT™</span><p>We brag about our partners every day.</p></div>
             <a href="#contact">Interested in joining us? Let&apos;s get started. <span>↗</span></a>
           </div>
         </section>
 
         <section className="archive-section" id="archive">
-          <div className="archive-graffiti" aria-hidden="true"><Image src={`${basePath}/images/tony-graffiti-slogan.png`} alt="" width={1774} height={887} /></div>
           <div className="section-shell archive-heading">
             <p className="section-label">02 / From the archive</p>
             <div>
@@ -183,7 +182,7 @@ export default function Home() {
               <figcaption><span>03</span><strong>The archive</strong></figcaption>
             </figure>
           </div>
-          <div className="archive-register" aria-hidden="true"><span>TC / ARCHIVE</span><i /><b>03 FRAMES</b></div>
+          <div className="archive-register" aria-hidden="true"><span>AT MY JOB + LOVING IT™</span><i /><b>TC / 03 FRAMES</b></div>
         </section>
 
         <section className="civic-section" aria-label="Columbia, South Carolina landmarks">
@@ -227,7 +226,6 @@ export default function Home() {
               <p className="section-label">04 / Start here</p>
               <h2>HOW CAN<br /><em>WE HELP?</em></h2>
               <p>Tell us what you care about, who needs to hear it, and what a good outcome looks like.</p>
-              <div className="contact-graffiti" aria-hidden="true"><Image src={`${basePath}/images/tony-graffiti-slogan.png`} alt="" width={1774} height={887} /></div>
               <div className="direct-contact">
                 <a href="tel:+18032919844">803.291.9844</a>
                 <span>West Columbia, South Carolina</span>
