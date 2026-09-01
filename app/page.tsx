@@ -61,7 +61,7 @@ export default function Home() {
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Tony Clyburn home">
           <strong>TONY CLYBURN</strong>
-          <span>VOICE · PURPOSE · PARTNERSHIP</span>
+          <span>AT MY JOB AND LOVING IT™</span>
         </a>
         <button
           className="menu-button"
@@ -117,6 +117,9 @@ export default function Home() {
                 <a className="button button-primary" href="#contact">Start a conversation <span>↗</span></a>
                 <a className="text-link" href="#voice">Hear what matters <span>↓</span></a>
               </div>
+              <div className="hero-trademark" aria-label="At my job and loving it, trademark">
+                <span>AT MY JOB</span><strong>AND LOVING IT™</strong>
+              </div>
             </div>
 
             <div className="hero-portrait">
@@ -131,7 +134,7 @@ export default function Home() {
         </section>
 
         <div className="resonance-bar" aria-label="Tony Clyburn voice qualities">
-          <span>SINCERE</span><b>●</b><span>COLLABORATIVE</span><b>●</b><span>RESILIENT</span><b>●</b><span>HUMAN</span>
+          <strong className="resonance-signature">AT MY JOB AND LOVING IT™</strong><b>●</b><span>SINCERE</span><b>●</b><span>COLLABORATIVE</span><b>●</b><span>RESILIENT</span><b>●</b><span>HUMAN</span><b>●</b><strong className="resonance-signature">AT MY JOB AND LOVING IT™</strong>
         </div>
 
         <section className="voice-section" id="voice">
@@ -152,7 +155,7 @@ export default function Home() {
             ))}
           </div>
           <div className="section-shell brag-line">
-            <p>We brag about our partners every day.</p>
+            <div><small>AT MY JOB AND LOVING IT™</small><p>We brag about our partners every day.</p></div>
             <a href="#contact">Interested in joining us? Let&apos;s get started. <span>↗</span></a>
           </div>
         </section>
@@ -179,7 +182,7 @@ export default function Home() {
               <figcaption><span>03</span><strong>The archive</strong></figcaption>
             </figure>
           </div>
-          <div className="archive-register" aria-hidden="true"><span>TC / ARCHIVE</span><i /><b>03 FRAMES</b></div>
+          <div className="archive-register" aria-hidden="true"><span>AT MY JOB AND LOVING IT™</span><i /><b>TC / 03 FRAMES</b></div>
         </section>
 
         <section className="civic-section" aria-label="Columbia, South Carolina landmarks">
@@ -192,12 +195,13 @@ export default function Home() {
           <div className="civic-overlay">
             <p>ROOTED HERE.<br />READY FOR<br /><em>WHAT&apos;S NEXT.</em></p>
           </div>
-          <div className="civic-labels" aria-hidden="true"><span>COLUMBIA / SOUTH CAROLINA</span><span>LOCAL FREQUENCY</span></div>
+          <div className="civic-labels" aria-hidden="true"><span>COLUMBIA / SOUTH CAROLINA</span><span>AT MY JOB AND LOVING IT™</span></div>
           <blockquote>“Whatever your project, we can do good together.”</blockquote>
         </section>
 
         <section className="pledge-section" id="pledge">
           <div className="pledge-signal" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
+          <div className="pledge-trademark" aria-hidden="true">AT MY JOB AND LOVING IT™</div>
           <div className="section-shell pledge-grid">
             <div className="pledge-title">
               <p className="section-label">03 / A pledge to our partners</p>
@@ -221,6 +225,7 @@ export default function Home() {
               <p className="section-label">04 / Start here</p>
               <h2>HOW CAN<br /><em>WE HELP?</em></h2>
               <p>Tell us what you care about, who needs to hear it, and what a good outcome looks like.</p>
+              <p className="contact-trademark">AT MY JOB AND LOVING IT™</p>
               <div className="direct-contact">
                 <a href="tel:+18032919844">803.291.9844</a>
                 <span>West Columbia, South Carolina</span>
@@ -246,8 +251,8 @@ export default function Home() {
 
       <footer>
         <div className="footer-main">
-          <a className="wordmark" href="#top"><strong>TONY CLYBURN</strong><span>VOICE · PURPOSE · PARTNERSHIP</span></a>
-          <p>Crisp. Clear. Midwestern resonance.</p>
+          <a className="wordmark" href="#top"><strong>TONY CLYBURN</strong><span>AT MY JOB AND LOVING IT™</span></a>
+          <p className="footer-tagline"><strong>AT MY JOB AND LOVING IT™</strong><span>Crisp. Clear. Midwestern resonance.</span></p>
           <div className="socials">
             <a href="https://facebook.com/TonyClyburnSC" target="_blank" rel="noreferrer">Facebook ↗</a>
             <a href="https://twitter.com/myjobandlovinit" target="_blank" rel="noreferrer">X / Twitter ↗</a>
@@ -258,7 +263,7 @@ export default function Home() {
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Tony Clyburn</span>
-          <span>A voice that cares as much as you.</span>
+          <span>AT MY JOB AND LOVING IT™</span>
           <a href="https://strataworks.tech" target="_blank" rel="noreferrer">Website by StrataWorks ↗</a>
         </div>
       </footer>
