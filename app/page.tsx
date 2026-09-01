@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useRef, useState } from 'react';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
@@ -15,6 +15,38 @@ const voiceQualities = [
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [audioState, setAudioState] = useState<'starting' | 'playing' | 'paused' | 'blocked' | 'ended'>('starting');
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    audio.volume = 0.78;
+    const playback = audio.play();
+    if (playback) {
+      playback
+        .then(() => setAudioState('playing'))
+        .catch(() => setAudioState('blocked'));
+    }
+  }, []);
+
+  async function toggleAudio() {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (audio.paused) {
+      try {
+        await audio.play();
+        setAudioState('playing');
+      } catch {
+        setAudioState('blocked');
+      }
+    } else {
+      audio.pause();
+      setAudioState('paused');
+    }
+  }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -46,6 +78,28 @@ export default function Home() {
           <a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Let&apos;s get started <span>↗</span></a>
         </nav>
       </header>
+
+      <audio
+        ref={audioRef}
+        src={`${basePath}/audio/tony-at-my-job.mp3`}
+        preload="auto"
+        autoPlay
+        onPlay={() => setAudioState('playing')}
+        onPause={() => setAudioState((current) => current === 'ended' ? current : 'paused')}
+        onEnded={() => setAudioState('ended')}
+      />
+      <button
+        className={`audio-control ${audioState}`}
+        type="button"
+        onClick={toggleAudio}
+        aria-label={audioState === 'playing' ? 'Pause Tony Clyburn introduction' : 'Play Tony Clyburn introduction'}
+      >
+        <span className="audio-bars" aria-hidden="true"><i /><i /><i /><i /></span>
+        <span className="audio-label">
+          <small>{audioState === 'blocked' ? 'Sound is ready' : audioState === 'playing' ? 'Now playing' : 'Tony Clyburn audio'}</small>
+          <strong>{audioState === 'playing' ? 'Pause intro' : audioState === 'ended' ? 'Replay intro' : 'Play Tony&apos;s intro'}</strong>
+        </span>
+      </button>
 
       <div id="content">
         <section className="hero" id="top">
