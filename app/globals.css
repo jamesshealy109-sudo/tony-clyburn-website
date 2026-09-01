@@ -219,14 +219,14 @@ h2 em span { color: var(--blue); font-size: .5em; letter-spacing: -.04em; vertic
 footer { padding: 58px max(32px,4vw) 28px; background: #0a1421; color: var(--paper); }
 .footer-main { width: min(1340px, 100%); display: grid; grid-template-columns: 1fr auto auto; gap: 45px; align-items: center; margin: 0 auto 50px; }
 .footer-main p { margin: 0; color: #929a9f; font-style: italic; }
-.socials { display: flex; gap: 22px; font-family: Arial, Helvetica, sans-serif; font-size: .62rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.socials { display: flex; align-items: center; gap: 22px; font-family: Arial, Helvetica, sans-serif; font-size: .62rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
 .socials a:hover { color: var(--blue); }
 .footer-bottom { width: min(1340px, 100%); display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-inline: auto; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.14); color: #727c83; font-family: Arial, Helvetica, sans-serif; font-size: .57rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .footer-bottom a:hover { color: var(--blue); }
-.footer-easter-egg { flex: 0 0 auto; display: grid; place-items: center; width: 42px; height: 42px; opacity: .32; filter: grayscale(1); transition: opacity .25s ease, filter .25s ease, transform .25s ease; }
-.footer-easter-egg img { width: 32px; height: 32px; border-radius: 50%; object-fit: contain; }
-.footer-easter-egg:hover, .footer-easter-egg:focus-visible { opacity: .9; filter: grayscale(0); transform: rotate(-6deg) scale(1.08); }
-.footer-easter-egg:focus-visible { outline: 1px solid var(--blue); outline-offset: 4px; }
+.footer-easter-egg { flex: 0 0 auto; display: grid; place-items: center; width: 52px; height: 52px; border: 2px solid var(--paper); background: var(--paper); box-shadow: 5px 5px 0 var(--rust); opacity: 1; transform: rotate(-2deg); transition: background .25s ease, box-shadow .25s ease, transform .25s ease; }
+.footer-easter-egg img { width: 40px; height: 40px; border-radius: 50%; object-fit: contain; }
+.footer-easter-egg:hover, .footer-easter-egg:focus-visible { background: white; box-shadow: 7px 7px 0 var(--blue); transform: translateY(-4px) rotate(5deg) scale(1.08); }
+.footer-easter-egg:focus-visible { outline: 2px solid var(--blue); outline-offset: 5px; }
 
 @media (max-width: 960px) {
   .menu-button { display: flex; align-items: center; gap: 7px; border: 0; background: transparent; color: white; font-family: Arial, sans-serif; font-size: .65rem; font-weight: 900; text-transform: uppercase; }

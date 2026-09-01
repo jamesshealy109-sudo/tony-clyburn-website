@@ -248,14 +248,17 @@ export default function Home() {
         <div className="footer-main">
           <a className="wordmark" href="#top"><strong>TONY CLYBURN</strong><span>VOICE · PURPOSE · PARTNERSHIP</span></a>
           <p>Crisp. Clear. Midwestern resonance.</p>
-          <div className="socials"><a href="https://facebook.com/TonyClyburnSC" target="_blank" rel="noreferrer">Facebook ↗</a><a href="https://twitter.com/myjobandlovinit" target="_blank" rel="noreferrer">X / Twitter ↗</a></div>
+          <div className="socials">
+            <a href="https://facebook.com/TonyClyburnSC" target="_blank" rel="noreferrer">Facebook ↗</a>
+            <a href="https://twitter.com/myjobandlovinit" target="_blank" rel="noreferrer">X / Twitter ↗</a>
+            <a className="footer-easter-egg" href="https://f3midlands.com/" target="_blank" rel="noreferrer" aria-label="Visit F3 Midlands" title="F3 Midlands">
+              <Image src="https://f3midlands.com/assets/f3-logo.png" alt="" width={40} height={40} unoptimized />
+            </a>
+          </div>
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Tony Clyburn</span>
           <span>A voice that cares as much as you.</span>
-          <a className="footer-easter-egg" href="https://f3midlands.com/" target="_blank" rel="noreferrer" aria-label="Visit F3 Midlands" title="F3 Midlands">
-            <Image src="https://f3midlands.com/assets/f3-logo.png" alt="" width={34} height={34} unoptimized />
-          </a>
           <a href="https://strataworks.tech" target="_blank" rel="noreferrer">Website by StrataWorks ↗</a>
         </div>
       </footer>
