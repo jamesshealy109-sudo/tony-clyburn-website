@@ -124,9 +124,7 @@ export default function Home() {
               <div className="portrait-frame">
                 <Image src={`${basePath}/images/tony-client-portrait.jpg`} alt="Tony Clyburn standing in front of a brick wall" fill priority sizes="(max-width: 860px) 100vw, 43vw" />
               </div>
-              <div className="graffiti-mark portrait-signature">
-                <Image src={`${basePath}/images/tony-graffiti-slogan-v2.png`} alt="At My Job and Loving It, trademark" width={1774} height={887} sizes="(max-width: 600px) 72vw, 430px" />
-              </div>
+              <div className="slogan-stamp portrait-signature">AT MY JOB AND LOVING IT™</div>
               <div className="portrait-caption"><strong>TONY CLYBURN</strong><span>COLUMBIA · SOUTH CAROLINA</span></div>
               <div className="voice-mark" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /></div>
             </div>
@@ -134,7 +132,7 @@ export default function Home() {
         </section>
 
         <div className="resonance-bar" aria-label="Tony Clyburn voice qualities">
-          <strong className="resonance-signature">AT MY JOB AND LOVING IT™</strong><b>●</b><span>SINCERE</span><b>●</b><span>COLLABORATIVE</span><b>●</b><span>RESILIENT</span><b>●</b><span>HUMAN</span>
+          <strong className="slogan-stamp resonance-signature">AT MY JOB AND LOVING IT™</strong><b>●</b><span>SINCERE</span><b>●</b><span>COLLABORATIVE</span><b>●</b><span>RESILIENT</span><b>●</b><span>HUMAN</span>
         </div>
 
         <section className="voice-section" id="voice">
@@ -155,7 +153,7 @@ export default function Home() {
             ))}
           </div>
           <div className="section-shell brag-line">
-            <div><span className="brag-kicker">AT MY JOB AND LOVING IT™</span><p>We brag about our partners every day.</p></div>
+            <div><span className="slogan-stamp brag-kicker">AT MY JOB AND LOVING IT™</span><p>We brag about our partners every day.</p></div>
             <a href="#contact">Interested in joining us? Let&apos;s get started. <span>↗</span></a>
           </div>
         </section>
@@ -182,7 +180,7 @@ export default function Home() {
               <figcaption><span>03</span><strong>The archive</strong></figcaption>
             </figure>
           </div>
-          <div className="archive-register" aria-hidden="true"><span>AT MY JOB + LOVING IT™</span><i /><b>TC / 03 FRAMES</b></div>
+          <div className="archive-register" aria-hidden="true"><span>TC / ARCHIVE</span><i /><b>03 FRAMES</b></div>
         </section>
 
         <section className="civic-section" aria-label="Columbia, South Carolina landmarks">
@@ -195,14 +193,13 @@ export default function Home() {
           <div className="civic-overlay">
             <p>ROOTED HERE.<br />READY FOR<br /><em>WHAT&apos;S NEXT.</em></p>
           </div>
-          <div className="civic-graffiti" aria-hidden="true"><Image src={`${basePath}/images/tony-graffiti-slogan-v2.png`} alt="" width={1774} height={887} /></div>
-          <div className="civic-labels" aria-hidden="true"><span>COLUMBIA / SOUTH CAROLINA</span><span>AT MY JOB AND LOVING IT™</span></div>
+          <div className="slogan-stamp civic-signature">AT MY JOB AND LOVING IT™</div>
+          <div className="civic-labels" aria-hidden="true"><span>COLUMBIA / SOUTH CAROLINA</span></div>
           <blockquote>“Whatever your project, we can do good together.”</blockquote>
         </section>
 
         <section className="pledge-section" id="pledge">
           <div className="pledge-signal" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
-          <div className="pledge-graffiti" aria-hidden="true"><Image src={`${basePath}/images/tony-graffiti-slogan-v2.png`} alt="" width={1774} height={887} /></div>
           <div className="section-shell pledge-grid">
             <div className="pledge-title">
               <p className="section-label">03 / A pledge to our partners</p>
@@ -226,6 +223,7 @@ export default function Home() {
               <p className="section-label">04 / Start here</p>
               <h2>HOW CAN<br /><em>WE HELP?</em></h2>
               <p>Tell us what you care about, who needs to hear it, and what a good outcome looks like.</p>
+              <span className="slogan-stamp contact-signature">AT MY JOB AND LOVING IT™</span>
               <div className="direct-contact">
                 <a href="tel:+18032919844">803.291.9844</a>
                 <span>West Columbia, South Carolina</span>
@@ -252,7 +250,7 @@ export default function Home() {
       <footer>
         <div className="footer-main">
           <a className="wordmark" href="#top"><strong>TONY CLYBURN</strong><span>AT MY JOB AND LOVING IT™</span></a>
-          <div className="footer-tagline"><span className="footer-graffiti" aria-hidden="true"><Image src={`${basePath}/images/tony-graffiti-slogan-v2.png`} alt="" width={1774} height={887} /></span><span>Crisp. Clear. Midwestern resonance.</span></div>
+          <div className="footer-tagline"><span className="slogan-stamp footer-signature">AT MY JOB AND LOVING IT™</span><span>Crisp. Clear. Midwestern resonance.</span></div>
           <div className="socials">
             <a href="https://facebook.com/TonyClyburnSC" target="_blank" rel="noreferrer">Facebook ↗</a>
             <a href="https://twitter.com/myjobandlovinit" target="_blank" rel="noreferrer">X / Twitter ↗</a>
