@@ -117,15 +117,15 @@ export default function Home() {
                 <a className="button button-primary" href="#contact">Start a conversation <span>↗</span></a>
                 <a className="text-link" href="#voice">Hear what matters <span>↓</span></a>
               </div>
-              <div className="graffiti-mark graffiti-hero">
-                <Image src={`${basePath}/images/tony-graffiti-slogan-v2.png`} alt="At My Job and Loving It, trademark" width={1774} height={887} sizes="(max-width: 600px) 86vw, 410px" />
-              </div>
             </div>
 
             <div className="hero-portrait">
               <div className="portrait-backdrop" aria-hidden="true">TC</div>
               <div className="portrait-frame">
                 <Image src={`${basePath}/images/tony-client-portrait.jpg`} alt="Tony Clyburn standing in front of a brick wall" fill priority sizes="(max-width: 860px) 100vw, 43vw" />
+              </div>
+              <div className="graffiti-mark portrait-signature">
+                <Image src={`${basePath}/images/tony-graffiti-slogan-v2.png`} alt="At My Job and Loving It, trademark" width={1774} height={887} sizes="(max-width: 600px) 72vw, 430px" />
               </div>
               <div className="portrait-caption"><strong>TONY CLYBURN</strong><span>COLUMBIA · SOUTH CAROLINA</span></div>
               <div className="voice-mark" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /></div>
