@@ -4,7 +4,7 @@ A high-energy, editorial refresh for broadcaster, speaker, host, voice actor, an
 
 ## Live website
 
-### [View Tony Clyburn's live website →](https://jamesshealy109-sudo.github.io/tony-clyburn-site/)
+### [View Tony Clyburn's live website →](https://jamesshealy109-sudo.github.io/tony-clyburn-website/)
 
 The public website requires no account or sign-in.
 
