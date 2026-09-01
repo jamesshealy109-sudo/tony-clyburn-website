@@ -56,6 +56,7 @@ export default function Home() {
   return (
     <main>
       <a className="skip-link" href="#content">Skip to content</a>
+      <div className="site-grain" aria-hidden="true" />
 
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Tony Clyburn home">
@@ -104,6 +105,9 @@ export default function Home() {
       <div id="content">
         <section className="hero" id="top">
           <div className="hero-rule" aria-hidden="true"><span /><span /><span /><span /><span /></div>
+          <div className="hero-frequency" aria-hidden="true">
+            <span>VOICE PROFILE</span><b>01 — 04</b><i />
+          </div>
           <div className="hero-grid">
             <div className="hero-copy">
               <p className="eyebrow">A voice that cares as much as you</p>
@@ -140,7 +144,7 @@ export default function Home() {
           </div>
           <div className="section-shell quality-grid">
             {voiceQualities.map((quality) => (
-              <article className="quality-card" key={quality.number}>
+              <article className="quality-card" key={quality.number} data-number={quality.number}>
                 <span>{quality.number}</span>
                 <h3>{quality.title}</h3>
                 <p>{quality.note}</p>
@@ -175,6 +179,7 @@ export default function Home() {
               <figcaption><span>03</span><strong>The archive</strong></figcaption>
             </figure>
           </div>
+          <div className="archive-register" aria-hidden="true"><span>TC / ARCHIVE</span><i /><b>03 FRAMES</b></div>
         </section>
 
         <section className="civic-section" aria-label="Columbia, South Carolina landmarks">
@@ -187,10 +192,12 @@ export default function Home() {
           <div className="civic-overlay">
             <p>ROOTED HERE.<br />READY FOR<br /><em>WHAT&apos;S NEXT.</em></p>
           </div>
+          <div className="civic-labels" aria-hidden="true"><span>COLUMBIA / SOUTH CAROLINA</span><span>LOCAL FREQUENCY</span></div>
           <blockquote>“Whatever your project, we can do good together.”</blockquote>
         </section>
 
         <section className="pledge-section" id="pledge">
+          <div className="pledge-signal" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
           <div className="section-shell pledge-grid">
             <div className="pledge-title">
               <p className="section-label">03 / A pledge to our partners</p>
