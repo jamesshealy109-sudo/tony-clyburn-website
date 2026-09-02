@@ -134,6 +134,7 @@ h2 em { color: var(--rust); font-family: var(--serif); font-weight: 400; }
 .speaking { padding-block: 150px; }
 .speaking-heading { display: grid; grid-template-columns: 1.12fr .5fr; gap: 80px; align-items: end; }
 .speaking-heading .section-kicker { grid-column: 1 / -1; }
+.speaker-answer { max-width: 1120px; margin: 80px 0 0 auto; padding-left: clamp(20px, 8vw, 120px); border-left: 5px solid var(--rust); color: var(--rust); font-family: var(--sans); font-size: clamp(2.4rem, 5.7vw, 6.8rem); font-weight: 900; letter-spacing: -.065em; line-height: .9; }
 .speaking-themes { margin-top: 90px; border-top: 2px solid var(--ink); }
 .speaking-themes article { display: grid; grid-template-columns: 70px .75fr 1fr; gap: 35px; padding: 32px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
 .speaking-themes span { color: var(--rust); font-family: var(--sans); font-size: .68rem; font-weight: 900; }
@@ -221,7 +222,7 @@ footer { display: grid; grid-template-columns: 1fr 1fr .75fr; gap: 50px; padding
   .brand-reveal { gap: 65px; padding: 85px 18px; }.brand-artifact { width: 86vw; }.brand-reveal h2 { margin-top: 25px; }
   .on-air-image { min-height: 300px; }.showing-content { padding-block: 80px 95px; }.showing-details { font-size: .95rem; }
   .listen-image { min-height: 500px; }.listen-copy { padding: 80px 18px; }
-  .speaking-heading .section-kicker { grid-column: auto; }.speaking-themes { margin-top: 55px; }.speaking-themes article { grid-template-columns: 38px 1fr; gap: 16px; }.speaking-themes article p { grid-column: 2; }
+  .speaking-heading .section-kicker { grid-column: auto; }.speaker-answer { margin-top: 55px; }.speaking-themes { margin-top: 55px; }.speaking-themes article { grid-template-columns: 38px 1fr; gap: 16px; }.speaking-themes article p { grid-column: 2; }
   .custom-note { grid-template-columns: 1fr; }
   .credibility { grid-template-columns: 1fr; padding-block: 45px; }.credibility > p { grid-column: auto; }
   .conversation { grid-template-columns: 1fr; }.conversation-photo { min-height: 530px; box-shadow: -12px 12px 0 var(--blue); }

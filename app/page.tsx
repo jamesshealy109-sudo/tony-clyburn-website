@@ -5,16 +5,16 @@ import InquiryForms from './components/InquiryForms';
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
 const storySteps = [
-  ['01', 'Working people', 'Tony knew he could write and perform before he knew where those abilities belonged.'],
-  ['02', 'School announcements', 'In junior high, he began speaking to a community he already knew.'],
-  ['03', 'Friday-night football', 'He carried equipment from broadcast to broadcast—sometimes missing his own games to be there.'],
-  ['04', 'The work before the voice', 'Broadcasting may look glamorous. Tony learned it from the cables up.'],
+  ['01', 'Working people', 'That is where Tony comes from.'],
+  ['02', 'School announcements', 'He knew he could write. He knew he could perform. In junior high, he did the school announcements.'],
+  ['03', 'Friday-night football', 'When there was a chance to carry equipment for the broadcasts, he carried it. Sometimes he missed his own games.'],
+  ['04', 'A way in', 'It wasn’t glamorous. He wanted to be around the broadcast.'],
 ];
 
-const speakingThemes = [
-  ['The work', 'Why the work people do matters—and what changes when people recognize it in one another.'],
-  ['The people', 'What decades of conversations reveal about curiosity, trust, and connection.'],
-  ['Showing up', 'What happens when consistency, service, and authenticity become more than slogans.'],
+const speakingPrinciples = [
+  ['Ask better questions', 'Do not assume you understand somebody’s work. Ask.'],
+  ['Pay attention', 'The details people overlook are often the details that matter.'],
+  ['Start with the room', 'Every organization has its own people, its own work, and its own story.'],
 ];
 
 export default function Home() {
@@ -42,10 +42,10 @@ export default function Home() {
             <h1><span>AT MY JOB</span><span>AND LOVING IT™</span></h1>
             <p className="hero-name">Tony Clyburn</p>
             <p className="hero-role">Broadcaster. Storyteller. Speaker.</p>
-            <p className="hero-lede">A career behind the microphone taught Tony something simple: the work people do matters—and every person has a story worth hearing.</p>
+            <p className="hero-lede">For decades, Tony Clyburn has made a living talking with people. Somewhere along the way, he learned the most important part of the job was listening.</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#booking">Book Tony</a>
-              <a className="button button-quiet" href="#story">Tony&apos;s story <span aria-hidden="true">↓</span></a>
+              <a className="button button-primary" href="#booking">Bring Tony to your audience</a>
+              <a className="button button-quiet" href="#story">Hear the story <span aria-hidden="true">↓</span></a>
             </div>
             <AudioIntro />
           </div>
@@ -66,7 +66,7 @@ export default function Home() {
           <div className="section-kicker">01 / The beginning</div>
           <div className="working-heading">
             <h2>IT STARTED WITH<br /><em>WORKING PEOPLE.</em></h2>
-            <p>Tony grew up around working people. Long before he knew where writing and performance would take him, he knew he wanted to communicate.</p>
+            <p>Tony knew he could write. He knew he could perform. He just didn&apos;t know yet what to do with either one.</p>
           </div>
           <div className="working-layout">
             <figure className="archive-figure">
@@ -80,7 +80,7 @@ export default function Home() {
                   <div><h3>{title}</h3><p>{copy}</p></div>
                 </article>
               ))}
-              <p className="chapter-end">FIRST CAME THE WORK.</p>
+              <p className="chapter-end">HE WANTED TO BE IN RADIO BADLY ENOUGH TO DO THE PART NOBODY SAW.</p>
             </div>
           </div>
         </section>
@@ -89,7 +89,7 @@ export default function Home() {
           <Image src={`${basePath}/images/story/vintage-radio.webp`} alt="Close view of a vintage radio dial and ivory push buttons" fill sizes="100vw" />
           <div className="radio-overlay">
             <p>BEFORE STREAMING.<br />BEFORE SOCIAL MEDIA.<br /><em>THERE WAS THE VOICE.</em></p>
-            <span>Radio could connect people separated by miles—and make the distance feel smaller.</span>
+            <span>Tony loved what radio could do. One person could sit behind a microphone and become part of thousands of different days—at home, in the car, at work, on the way somewhere. People who might never meet could still share the same moment.</span>
           </div>
         </section>
 
@@ -97,16 +97,16 @@ export default function Home() {
           <div className="section-kicker">02 / The phrase</div>
           <div className="origin-intro">
             <h2>BEFORE IT WAS A BRAND,<br /><em>IT WAS JUST SOMETHING TONY SAID.</em></h2>
-            <p>Tony remembers saying “At My Job And Loving It” as a teenager—before he moved to Columbia in 1987. It wasn&apos;t written for a campaign. It came with him.</p>
+            <p>Tony was saying “At My Job And Loving It” before he ever came to Columbia. He remembers saying it as a teenager. But after he moved here in 1987, something happened he hadn&apos;t planned on.</p>
           </div>
           <div className="origin-turn">
             <p className="era">COLUMBIA · AFTER 1987</p>
-            <blockquote>“AT MY JOB<br />AND LOVING IT.”</blockquote>
-            <p className="origin-reply">Then people started saying it back.</p>
+            <blockquote>PEOPLE STARTED<br />SAYING IT BACK.</blockquote>
+            <p className="origin-reply">They&apos;d say, “At my job and loving it.” And then they&apos;d tell Tony what their job was.</p>
           </div>
           <div className="origin-story">
-            <p className="large">And then they&apos;d tell Tony what their job was.</p>
-            <p>Those conversations opened into how the work got done, why it mattered, and the details other people overlooked. The phrase connected Tony to people, their communities, and their stories.</p>
+            <p className="large">A PHRASE BECAME A CONVERSATION.</p>
+            <p>People told Tony what they did. Those conversations led to relationships. People shared what they knew. Tony learned about their work, their businesses, and their lives.</p>
           </div>
         </section>
 
@@ -117,7 +117,7 @@ export default function Home() {
           <div>
             <p className="section-kicker">03 / The brand</p>
             <h2>THE PHRASE<br /><em>BECAME A BRAND.</em></h2>
-            <p>AT MY JOB AND LOVING IT™ is Tony&apos;s invitation to notice the people behind the work—and to ask what their work means to them.</p>
+            <p>Other people made the phrase their own. It gave them a way to tell Tony something about themselves.</p>
             <div className="future-link"><span>SHOP AMJALI</span><small>Future collection</small></div>
           </div>
         </section>
@@ -129,14 +129,14 @@ export default function Home() {
           <div className="showing-content section">
             <p className="section-kicker">04 / Public service</p>
             <div>
-              <h2>SHOWING UP.</h2>
-              <p className="showing-lede">People choose to give Tony part of their day. He takes that trust seriously.</p>
+              <h2>THE JOB IS<br />TO SHOW UP.</h2>
+              <p className="showing-lede">People don&apos;t owe Tony their time.</p>
             </div>
             <div className="showing-details">
-              <p>For Tony, broadcasting is public service. Across decades on the air, listeners have heard him through fires, hurricanes, September 11, wars, and ordinary daily life.</p>
-              <p>The point is not the event. It is the responsibility: be present, be useful, and become part of the family by showing up again tomorrow.</p>
+              <p>Every morning commute. Every afternoon at work. Every drive home. If somebody chooses to spend part of that time with him, Tony believes he owes them something in return.</p>
+              <p>He has shown up through ordinary days, hurricanes, fires, September 11, wars, and moments nobody expected. Eventually, a voice on the radio can become something more familiar. Tony calls it becoming part of the family.</p>
             </div>
-            <p className="showing-line">THAT TRUST IS EARNED BY SHOWING UP.</p>
+            <p className="showing-line">HIS JOB IS TO SHOW UP.</p>
           </div>
         </section>
 
@@ -147,7 +147,7 @@ export default function Home() {
           <div className="listen-copy">
             <p className="section-kicker">05 / Curiosity</p>
             <h2>LISTEN<br /><em>FIRST.</em></h2>
-            <p>Tony has spent a career asking granular questions: What do you do? How does it work? Why do you do it?</p>
+            <p>Tony has spent a career asking questions.</p>
             <p>The most interesting person in the room is not always the person holding the microphone.</p>
             <blockquote>“I WANT TO KNOW<br />YOUR STORY.”</blockquote>
           </div>
@@ -156,20 +156,21 @@ export default function Home() {
         <section className="speaking section" id="speaking">
           <div className="speaking-heading">
             <p className="section-kicker">06 / Speaking</p>
-            <h2>BRING TONY<br /><em>INTO THE ROOM.</em></h2>
-            <p>Tony brings decades of interviewing, broadcasting, storytelling, and community-building into an engagement shaped around your people, your work, and your story.</p>
+            <h2>YOUR STORY<br /><em>COMES FIRST.</em></h2>
+            <p>Ask Tony what he wants someone to remember after hearing him speak. He won&apos;t tell you he hopes they remember his story.</p>
           </div>
+          <p className="speaker-answer">HE HOPES THEY REMEMBER THAT HE WAS INTERESTED IN THEIRS.</p>
           <div className="speaking-themes">
-            {speakingThemes.map(([title, copy], index) => (
+            {speakingPrinciples.map(([title, copy], index) => (
               <article key={title}>
                 <span>0{index + 1}</span><h3>{title}</h3><p>{copy}</p>
               </article>
             ))}
           </div>
           <div className="custom-note">
-            <p>No canned keynote. No borrowed slogans.</p>
-            <p>Every audience is different. Tony wants people to leave able to explain what they saw, heard, and took part in—and to know it was made for their room.</p>
-            <a className="button button-primary" href="#booking">Book Tony</a>
+            <p>Tony doesn&apos;t believe every room needs the same speech.</p>
+            <p>Every organization has its own people. Its own work. Its own story. That&apos;s where he starts.</p>
+            <a className="button button-primary" href="#booking">Bring Tony to your audience</a>
           </div>
         </section>
 
@@ -185,8 +186,8 @@ export default function Home() {
           </div>
           <div>
             <p className="section-kicker">Along the way</p>
-            <h2>THE MICROPHONE<br /><em>WAS NEVER THE POINT.</em></h2>
-            <p>Connection was. Tony believes that if people talk with one another a little more, they can accomplish a tremendous amount.</p>
+            <h2>TONY KEPT<br /><em>ASKING QUESTIONS.</em></h2>
+            <p>What do you do? How does it work? Why does it work that way? Why do you care about it? Tony wants the details other people overlook.</p>
           </div>
         </section>
 
@@ -197,7 +198,7 @@ export default function Home() {
           <h2>TONY HAS SPENT A CAREER<br />ASKING PEOPLE ABOUT THEIR STORY.</h2>
           <blockquote>WHAT&apos;S YOURS?</blockquote>
           <div>
-            <a className="button button-light" href="#booking">Bring Tony to your event</a>
+            <a className="button button-light" href="#booking">Bring Tony to your audience</a>
             <a className="button button-outline" href="#your-story">Tell Tony your story</a>
           </div>
         </section>
