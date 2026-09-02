@@ -206,17 +206,24 @@ export default function Home() {
       <footer>
         <a className="wordmark" href="#top"><strong>TONY CLYBURN</strong><span>AT MY JOB AND LOVING IT™</span></a>
         <div className="footer-nav"><a href="#story">Story</a><a href="#speaking">Speaking</a><span>Media · coming later</span><span>Shop · coming later</span><a href="#booking">Contact</a></div>
-        <div className="footer-contact"><a href="tel:+18032919844">803.291.9844</a><span>West Columbia, South Carolina</span></div>
-        <div className="footer-marks">
-          <a className="f3-mark" href="https://f3midlands.com/" target="_blank" rel="noreferrer" aria-label="Visit F3 Midlands">
-            <Image src={`${basePath}/images/marks/f3-midlands-logo.png`} alt="F3 Midlands" width={64} height={64} />
-          </a>
+        <div className="footer-contact">
+          <a href="tel:+18032919844">803.291.9844</a>
+          <span>West Columbia, South Carolina</span>
           <a className="strataworks-mark" href="https://strataworks.tech" target="_blank" rel="noreferrer" aria-label="Visit StrataWorks">
             <span>Site by</span>
             <Image src={`${basePath}/images/marks/strataworks-logo.png`} alt="StrataWorks — Precision. Performance. Partnership." width={170} height={117} />
           </a>
         </div>
-        <div className="footer-bottom"><span>© {new Date().getFullYear()} Tony Clyburn</span><a href="https://facebook.com/TonyClyburnSC" target="_blank" rel="noreferrer">Facebook ↗</a><a href="https://twitter.com/myjobandlovinit" target="_blank" rel="noreferrer">X / Twitter ↗</a></div>
+        <div className="footer-bottom">
+          <span>© {new Date().getFullYear()} Tony Clyburn</span>
+          <div className="footer-socials">
+            <a href="https://facebook.com/TonyClyburnSC" target="_blank" rel="noreferrer">Facebook ↗</a>
+            <a href="https://twitter.com/myjobandlovinit" target="_blank" rel="noreferrer">X / Twitter ↗</a>
+            <a className="f3-social" href="https://f3midlands.com/" target="_blank" rel="noreferrer" aria-label="Visit F3 Midlands">
+              <Image src={`${basePath}/images/marks/f3-midlands-logo.png`} alt="F3 Midlands" width={30} height={30} />
+            </a>
+          </div>
+        </div>
       </footer>
     </main>
   );
