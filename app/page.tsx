@@ -149,7 +149,7 @@ export default function Home() {
             <h2>LISTEN<br /><em>FIRST.</em></h2>
             <p>Tony has spent a career asking questions.</p>
             <p>The most interesting person in the room is not always the person holding the microphone.</p>
-            <blockquote>“I WANT TO KNOW<br />YOUR STORY.”</blockquote>
+            <blockquote>I WANT TO KNOW<br />YOUR STORY.</blockquote>
           </div>
         </section>
 
