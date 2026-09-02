@@ -34,7 +34,7 @@ export default function StoryPage() {
             <p className="subpage-lede">Before At My Job And Loving It™ became a brand, before Columbia started saying it back, Tony Clyburn was a kid looking for a way into radio.</p>
           </div>
           <div className="subpage-hero-image archive-hero-image">
-            <Image src={`${basePath}/images/story/y95-am-show-archive.webp`} alt="Archival photograph of Tony Clyburn seated on a Y95 radio set" fill priority sizes="(max-width: 900px) 100vw, 45vw" />
+            <Image src={`${basePath}/images/story/tony-clyburn-y95-radio-archive-clean.webp`} alt="Archival photograph of Tony Clyburn seated on a Y95 radio set" fill priority sizes="(max-width: 900px) 100vw, 45vw" />
           </div>
         </section>
 
@@ -91,4 +91,3 @@ export default function StoryPage() {
     </main>
   );
 }
-

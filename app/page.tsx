@@ -79,8 +79,10 @@ export default function Home() {
           </div>
           <div className="working-layout">
             <figure className="archive-figure">
-              <Image src={`${basePath}/images/story/y95-am-show-archive.webp`} alt="Archival Y95 morning show photograph with Tony Clyburn seated on a radio set" width={1407} height={963} sizes="(max-width: 800px) 100vw, 46vw" />
-              <figcaption>From the radio archive</figcaption>
+              <a className="archive-photo-link" href="https://931thelakefm.com/" target="_blank" rel="noreferrer" aria-label="Visit the 93.1 The Lake website">
+                <Image src={`${basePath}/images/story/tony-clyburn-y95-radio-archive-clean.webp`} alt="Archival Y95 morning show photograph with Tony Clyburn seated on a radio set" width={1408} height={1112} sizes="(max-width: 800px) 100vw, 46vw" />
+              </a>
+              <figcaption className="archive-links"><a href="https://931thelakefm.com/" target="_blank" rel="noreferrer">93.1 The Lake ↗</a><a href="https://www.facebook.com/931thelake/" target="_blank" rel="noreferrer">Facebook ↗</a></figcaption>
             </figure>
             <div className="story-steps">
               {storySteps.map(([number, title, copy]) => (
