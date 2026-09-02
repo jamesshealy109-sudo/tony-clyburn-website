@@ -70,7 +70,7 @@ export default function Home() {
           </div>
           <div className="working-layout">
             <figure className="archive-figure">
-              <Image src={`${basePath}/images/story/y95-am-show-archive.webp`} alt="Archival Y95 morning show photograph with Tony Clyburn seated on a radio set" fill sizes="(max-width: 800px) 100vw, 46vw" />
+              <Image src={`${basePath}/images/story/y95-am-show-archive.webp`} alt="Archival Y95 morning show photograph with Tony Clyburn seated on a radio set" width={1407} height={963} sizes="(max-width: 800px) 100vw, 46vw" />
               <figcaption>From the radio archive</figcaption>
             </figure>
             <div className="story-steps">
@@ -182,7 +182,7 @@ export default function Home() {
 
         <section className="conversation section">
           <div className="conversation-photo">
-            <Image src={`${basePath}/images/story/tony-listening-archive.webp`} alt="Archival photograph of Tony Clyburn interviewing a young community member" fill sizes="(max-width: 900px) 100vw, 36vw" />
+            <Image src={`${basePath}/images/story/tony-listening-archive.webp`} alt="Archival photograph of Tony Clyburn interviewing a young community member" width={756} height={600} sizes="(max-width: 900px) 100vw, 36vw" />
           </div>
           <div>
             <p className="section-kicker">Along the way</p>
