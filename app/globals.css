@@ -154,12 +154,9 @@ h2 em span { color: var(--blue); font-size: .5em; letter-spacing: -.04em; vertic
 .archive-register { width: min(1340px, calc(100% - 64px)); display: grid; grid-template-columns: auto 1fr auto; gap: 18px; align-items: center; margin: 74px auto 0; color: rgba(255,255,255,.72); font-family: Arial, Helvetica, sans-serif; font-size: .5rem; font-weight: 900; letter-spacing: .2em; }
 .archive-register i { height: 1px; background: repeating-linear-gradient(90deg, currentColor 0 18px, transparent 18px 26px); }
 .archive-register b { font-size: inherit; }
-.phrase-story { position: relative; z-index: 2; display: grid; grid-template-columns: .3fr .9fr 1fr; gap: clamp(32px, 5vw, 74px); align-items: start; margin-top: 82px; padding-top: 54px; border-top: 1px solid rgba(255,255,255,.38); }
+.phrase-story { position: relative; z-index: 2; display: grid; grid-template-columns: .3fr 1fr; gap: clamp(32px, 5vw, 74px); align-items: start; margin-top: 82px; padding-top: 54px; border-top: 1px solid rgba(255,255,255,.38); }
 .phrase-story > p { margin: 8px 0 0; color: #f0dcd2; font-family: Arial, Helvetica, sans-serif; font-size: .59rem; font-weight: 900; letter-spacing: .18em; }
 .phrase-story blockquote { margin: 0; color: var(--navy); font-family: 'Arial Narrow', Arial, sans-serif; font-size: clamp(2.8rem, 5.2vw, 6rem); font-weight: 900; letter-spacing: -.06em; line-height: .9; }
-.phrase-story div { padding-left: 28px; border-left: 4px solid var(--navy); }
-.phrase-story div p { margin: 0; color: #f6e6de; font-size: 1.08rem; line-height: 1.62; }
-.phrase-story div p + p { margin-top: 18px; }
 
 .civic-section { position: relative; min-height: 700px; overflow: hidden; border-block: 10px solid var(--navy); }
 .civic-image { position: absolute; overflow: hidden; }
@@ -175,7 +172,6 @@ h2 em span { color: var(--blue); font-size: .5em; letter-spacing: -.04em; vertic
 .civic-labels { position: absolute; z-index: 3; top: 30px; left: max(32px, calc((100vw - 1340px) / 2)); right: max(32px, calc((100vw - 1340px) / 2)); display: flex; justify-content: space-between; color: rgba(255,255,255,.86); font-family: Arial, Helvetica, sans-serif; font-size: .5rem; font-weight: 900; letter-spacing: .2em; }
 .civic-labels span { padding: 9px 12px; border: 1px solid rgba(255,255,255,.42); background: rgba(16,29,45,.5); backdrop-filter: blur(6px); }
 .civic-signature { position: absolute; z-index: 3; left: max(32px, calc((100vw - 1340px) / 2)); bottom: 38px; transform: rotate(-1deg); }
-.civic-section blockquote { position: absolute; z-index: 3; right: max(32px, calc((100vw - 1340px) / 2)); bottom: 42px; width: min(490px, calc(100% - 64px)); margin: 0; padding: 27px 30px; border-left: 6px solid var(--rust); background: var(--paper); color: var(--navy); font-size: clamp(1.2rem, 2vw, 1.75rem); font-style: italic; line-height: 1.35; box-shadow: 12px 12px 0 var(--rust); }
 
 .pledge-section { position: relative; overflow: hidden; padding: 145px 0; background-color: var(--navy); background-image: radial-gradient(circle at 75% 18%, rgba(111,150,199,.13) 0 2px, transparent 2.5px); background-size: 24px 24px; color: var(--paper); }
 .pledge-section::before { content: '03'; position: absolute; left: -3vw; bottom: -7vw; color: rgba(255,255,255,.025); font-family: Arial, Helvetica, sans-serif; font-size: min(38vw, 540px); font-weight: 900; letter-spacing: -.12em; line-height: .8; }
@@ -262,7 +258,6 @@ footer { padding: 58px max(32px,4vw) 28px; background: #0a1421; color: var(--pap
   .story-grid { grid-template-columns: repeat(2, 1fr); }
   .story-card:nth-child(even) { transform: translateY(18px); }
   .phrase-story { grid-template-columns: 1fr 1fr; }
-  .phrase-story > p { grid-column: 1 / -1; }
   .civic-section { min-height: 620px; }
   .archive-grid { grid-template-columns: 1fr 1fr; }
   .archive-who { grid-column: 1 / -1; width: min(70%, 620px); justify-self: center; }
@@ -297,8 +292,6 @@ footer { padding: 58px max(32px,4vw) 28px; background: #0a1421; color: var(--pap
   .archive-who { grid-column: auto; width: 92%; justify-self: start; }
   .archive-color > div, .archive-headphones > div, .archive-who > div { height: 520px; }
   .phrase-story { grid-template-columns: 1fr; gap: 28px; margin-top: 60px; }
-  .phrase-story > p { grid-column: auto; }
-  .phrase-story div { padding-left: 18px; }
   .civic-section { min-height: 610px; }
   .civic-main { inset: 0 0 31% 0; }
   .civic-side { inset: 69% 0 0 0; border-left: 0; border-top: 8px solid var(--navy); }
@@ -306,7 +299,6 @@ footer { padding: 58px max(32px,4vw) 28px; background: #0a1421; color: var(--pap
   .civic-overlay { align-items: flex-start; padding: 75px 18px 0; }
   .civic-labels { left: 18px; right: 18px; }
   .civic-signature { left: 18px; bottom: 190px; font-size: .48rem; }
-  .civic-section blockquote { right: 18px; width: calc(100% - 36px); }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .contact-section::before { inset: 0 0 57%; clip-path: none; }
   .contact-form { padding: 25px 20px; box-shadow: 8px 8px 0 var(--blue), 12px 12px 0 -1px var(--navy); }

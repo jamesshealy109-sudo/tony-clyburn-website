@@ -154,7 +154,7 @@ export default function Home() {
             ))}
           </div>
           <div className="section-shell brag-line">
-            <div><span className="slogan-stamp brag-kicker">THE WORK BEHIND THE VOICE</span><p>Good broadcasting means understanding people, products, situations, and how things work—then explaining them without talking down to anyone.</p></div>
+            <div><span className="slogan-stamp brag-kicker">THE WORK BEHIND THE VOICE</span><p>Good broadcasting means understanding people, products, situations, and how things work.</p></div>
             <a href="#archive">Keep listening <span>↓</span></a>
           </div>
         </section>
@@ -185,7 +185,6 @@ export default function Home() {
           <div className="section-shell phrase-story">
             <p>COLUMBIA — AFTER 1987</p>
             <blockquote>“AT MY JOB AND LOVING IT.”</blockquote>
-            <div><p>Listeners began saying the phrase back to Tony.</p><p>And then they would tell him what their job was. Their work became their story. Those stories taught Tony about people, lives, and communities far beyond the studio.</p></div>
           </div>
         </section>
 
@@ -197,11 +196,10 @@ export default function Home() {
             <Image src={`${basePath}/images/tony-vintage-radio.jpg`} alt="Close view of a vintage radio dial and controls" fill sizes="(max-width: 760px) 100vw, 28vw" />
           </div>
           <div className="civic-overlay">
-            <p>THE PHRASE<br />CAME BACK.<br /><em>WITH A STORY.</em></p>
+            <p>RADIO MADE<br />DISTANCE<br /><em>FEEL SMALLER.</em></p>
           </div>
           <div className="slogan-stamp civic-signature">AT MY JOB AND LOVING IT™</div>
           <div className="civic-labels" aria-hidden="true"><span>COLUMBIA / AFTER 1987</span></div>
-          <blockquote>“And then they&apos;d tell Tony what their job was.”</blockquote>
         </section>
 
         <section className="pledge-section" id="pledge">
