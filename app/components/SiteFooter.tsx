@@ -25,6 +25,8 @@ export default function SiteFooter() {
         <div className="footer-socials">
           <a href="https://facebook.com/TonyClyburnSC" target="_blank" rel="noreferrer">Facebook ↗</a>
           <a href="https://twitter.com/myjobandlovinit" target="_blank" rel="noreferrer">X / Twitter ↗</a>
+          <a href="https://931thelakefm.com/" target="_blank" rel="noreferrer">93.1 The Lake ↗</a>
+          <a href="https://www.facebook.com/931thelake/" target="_blank" rel="noreferrer">93.1 Facebook ↗</a>
           <a className="f3-social" href="https://f3midlands.com/" target="_blank" rel="noreferrer" aria-label="Visit F3 Midlands">
             <Image src={`${basePath}/images/marks/f3-midlands-logo.png`} alt="F3 Midlands" width={30} height={30} />
           </a>
