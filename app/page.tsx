@@ -5,11 +5,11 @@ import { FormEvent, useEffect, useRef, useState } from 'react';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
-const voiceQualities = [
-  { number: '01', title: 'Soft & cuddly', note: 'Close, reassuring, familiar.' },
-  { number: '02', title: 'Warm & compassionate', note: 'Human, generous, sincerely felt.' },
-  { number: '03', title: 'A summer sea breeze', note: 'Easy, open, quietly refreshing.' },
-  { number: '04', title: 'A prairie fox', note: 'Resilient against the windswept plains.' },
+const storyMoments = [
+  { number: '01', era: 'The beginning', title: 'Working people', note: 'That is how Tony describes where he comes from. He knew he could write and perform before he knew where those abilities belonged.' },
+  { number: '02', era: 'Junior high', title: 'School announcements', note: 'Before radio, Tony was already speaking to people he knew—doing the announcements and learning what it meant to be heard.' },
+  { number: '03', era: 'Friday nights', title: 'Carry the equipment', note: 'When Tony wanted into broadcasting, he carried equipment from place to place for football broadcasts, sometimes missing his own games.' },
+  { number: '04', era: 'The real work', title: 'No glamour required', note: 'He wanted it badly enough to do the unglamorous part before anyone knew his name. Radio was where writing and performance finally met.' },
 ];
 
 export default function Home() {
@@ -73,10 +73,10 @@ export default function Home() {
           <span>Menu</span><i /><i />
         </button>
         <nav id="primary-nav" className={menuOpen ? 'nav-open' : ''} aria-label="Primary navigation">
-          <a href="#voice" onClick={() => setMenuOpen(false)}>Find your voice</a>
-          <a href="#archive" onClick={() => setMenuOpen(false)}>From the archive</a>
-          <a href="#pledge" onClick={() => setMenuOpen(false)}>Our pledge</a>
-          <a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Let&apos;s get started <span>↗</span></a>
+          <a href="#voice" onClick={() => setMenuOpen(false)}>Tony&apos;s story</a>
+          <a href="#archive" onClick={() => setMenuOpen(false)}>The phrase</a>
+          <a href="#pledge" onClick={() => setMenuOpen(false)}>Showing up</a>
+          <a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Bring Tony <span>↗</span></a>
         </nav>
       </header>
 
@@ -106,16 +106,16 @@ export default function Home() {
         <section className="hero" id="top">
           <div className="hero-rule" aria-hidden="true"><span /><span /><span /><span /><span /></div>
           <div className="hero-frequency" aria-hidden="true">
-            <span>VOICE PROFILE</span><b>01 — 04</b><i />
+            <span>PUBLIC SERVICE</span><b>ONE LISTENER AT A TIME</b><i />
           </div>
           <div className="hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow">A voice that cares as much as you</p>
+              <p className="eyebrow">Broadcaster · Storyteller · Public servant</p>
               <h1><span>CRISP.</span><span>CLEAR.</span><em>MIDWESTERN<br />RESONANCE.</em></h1>
-              <p className="hero-lede">When everything you care about is out there, you want a voice that cares as much as you.</p>
+              <p className="hero-lede">When someone gives you part of their day, you show up. Tony Clyburn has spent decades listening, asking questions, and helping people hear one another.</p>
               <div className="hero-actions">
-                <a className="button button-primary" href="#contact">Start a conversation <span>↗</span></a>
-                <a className="text-link" href="#voice">Hear what matters <span>↓</span></a>
+                <a className="button button-primary" href="#contact">Bring Tony to your audience <span>↗</span></a>
+                <a className="text-link" href="#voice">Start the story <span>↓</span></a>
               </div>
             </div>
 
@@ -132,44 +132,45 @@ export default function Home() {
         </section>
 
         <div className="resonance-bar" aria-label="Tony Clyburn voice qualities">
-          <strong className="slogan-stamp resonance-signature">AT MY JOB AND LOVING IT™</strong><b>●</b><span>SINCERE</span><b>●</b><span>COLLABORATIVE</span><b>●</b><span>RESILIENT</span><b>●</b><span>HUMAN</span>
+          <strong className="slogan-stamp resonance-signature">AT MY JOB AND LOVING IT™</strong><b>●</b><span>SERVICE</span><b>●</b><span>TRUST</span><b>●</b><span>CURIOSITY</span><b>●</b><span>CONNECTION</span><b>●</b><span>COMMUNITY</span>
         </div>
 
         <section className="voice-section" id="voice">
           <div className="section-shell voice-intro">
-            <p className="section-label">01 / Find your voice</p>
+            <p className="section-label">01 / Where the story starts</p>
             <div>
-              <h2>HOW DO YOU<br /><em>SEE <span>(HEAR)</span></em><br />YOURSELF?</h2>
-              <p className="voice-lede">The sincerity of everything you care about is in those syllables. The right voice makes them feel true.</p>
+              <h2>FROM<br /><em>WORKING<br />PEOPLE</em><br />TO THE MIC.</h2>
+              <p className="voice-lede">Tony knew he could write. He knew he could perform. Radio was where those two things finally found each other.</p>
             </div>
           </div>
-          <div className="section-shell quality-grid">
-            {voiceQualities.map((quality) => (
-              <article className="quality-card" key={quality.number} data-number={quality.number}>
-                <span>{quality.number}</span>
-                <h3>{quality.title}</h3>
-                <p>{quality.note}</p>
+          <div className="section-shell story-grid">
+            {storyMoments.map((moment) => (
+              <article className="story-card" key={moment.number} data-number={moment.number}>
+                <span>{moment.number}</span>
+                <small>{moment.era}</small>
+                <h3>{moment.title}</h3>
+                <p>{moment.note}</p>
               </article>
             ))}
           </div>
           <div className="section-shell brag-line">
-            <div><span className="slogan-stamp brag-kicker">AT MY JOB AND LOVING IT™</span><p>We brag about our partners every day.</p></div>
-            <a href="#contact">Interested in joining us? Let&apos;s get started. <span>↗</span></a>
+            <div><span className="slogan-stamp brag-kicker">THE WORK BEHIND THE VOICE</span><p>Good broadcasting means understanding people, products, situations, and how things work—then explaining them without talking down to anyone.</p></div>
+            <a href="#archive">Keep listening <span>↓</span></a>
           </div>
         </section>
 
         <section className="archive-section" id="archive">
           <div className="section-shell archive-heading">
-            <p className="section-label">02 / From the archive</p>
+            <p className="section-label">02 / The phrase</p>
             <div>
-              <h2>THE STORIES<br />BEHIND <em>THE SIGNAL.</em></h2>
-              <p>Every voice carries a history. These are a few frames from Tony&apos;s.</p>
+              <h2>HE SAID IT<br />BEFORE <em>COLUMBIA.</em></h2>
+              <p>Tony remembers saying “At My Job and Loving It” as a teenager—before he moved to Columbia in 1987. It was never invented for a campaign. It came with him.</p>
             </div>
           </div>
           <div className="section-shell archive-grid">
             <figure className="archive-card archive-color">
               <div><Image src={`${basePath}/images/tony-color-archive.jpg`} alt="Early color portrait of Tony Clyburn smiling against a blue studio background" fill sizes="(max-width: 760px) 100vw, 36vw" /></div>
-              <figcaption><span>01</span><strong>Portrait</strong></figcaption>
+              <figcaption><span>01</span><strong>The broadcaster</strong></figcaption>
             </figure>
             <figure className="archive-card archive-headphones">
               <div><Image src={`${basePath}/images/tony-headphones-archive.jpg`} alt="Tony Clyburn wearing headphones in a black-and-white archive photograph" fill sizes="(max-width: 760px) 100vw, 25vw" /></div>
@@ -177,40 +178,45 @@ export default function Home() {
             </figure>
             <figure className="archive-card archive-who">
               <div><Image src={`${basePath}/images/the-who-archive.jpg`} alt="Colorful collage of The Who photographs, posters, and music-industry memorabilia" fill sizes="(max-width: 760px) 100vw, 34vw" /></div>
-              <figcaption><span>03</span><strong>The archive</strong></figcaption>
+              <figcaption><span>03</span><strong>Stories everywhere</strong></figcaption>
             </figure>
           </div>
           <div className="archive-register" aria-hidden="true"><span>TC / ARCHIVE</span><i /><b>03 FRAMES</b></div>
+          <div className="section-shell phrase-story">
+            <p>COLUMBIA — AFTER 1987</p>
+            <blockquote>“AT MY JOB AND LOVING IT.”</blockquote>
+            <div><p>Listeners began saying the phrase back to Tony.</p><p>And then they would tell him what their job was. Their work became their story. Those stories taught Tony about people, lives, and communities far beyond the studio.</p></div>
+          </div>
         </section>
 
-        <section className="civic-section" aria-label="Columbia, South Carolina landmarks">
+        <section className="civic-section" aria-label="Radio connecting Tony Clyburn with Columbia listeners">
           <div className="civic-image civic-main">
-            <Image src={`${basePath}/images/adluh-flour-columbia.jpg`} alt="Historic Adluh Flour mill beneath a deep blue Columbia sky" fill sizes="(max-width: 760px) 100vw, 72vw" />
+            <Image src={`${basePath}/images/tony-columbia-street-classic-car.jpg`} alt="Classic car parked beneath a broad tree on a Columbia street" fill sizes="(max-width: 760px) 100vw, 72vw" />
           </div>
           <div className="civic-image civic-side">
-            <Image src={`${basePath}/images/south-carolina-state-house.jpg`} alt="South Carolina State House beneath a clear blue sky" fill sizes="(max-width: 760px) 100vw, 28vw" />
+            <Image src={`${basePath}/images/tony-vintage-radio.jpg`} alt="Close view of a vintage radio dial and controls" fill sizes="(max-width: 760px) 100vw, 28vw" />
           </div>
           <div className="civic-overlay">
-            <p>ROOTED HERE.<br />READY FOR<br /><em>WHAT&apos;S NEXT.</em></p>
+            <p>THE PHRASE<br />CAME BACK.<br /><em>WITH A STORY.</em></p>
           </div>
           <div className="slogan-stamp civic-signature">AT MY JOB AND LOVING IT™</div>
-          <div className="civic-labels" aria-hidden="true"><span>COLUMBIA / SOUTH CAROLINA</span></div>
-          <blockquote>“Whatever your project, we can do good together.”</blockquote>
+          <div className="civic-labels" aria-hidden="true"><span>COLUMBIA / AFTER 1987</span></div>
+          <blockquote>“And then they&apos;d tell Tony what their job was.”</blockquote>
         </section>
 
         <section className="pledge-section" id="pledge">
           <div className="pledge-signal" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
           <div className="section-shell pledge-grid">
             <div className="pledge-title">
-              <p className="section-label">03 / A pledge to our partners</p>
-              <h2>WE SPEAK<br />THE TRUTH,<br /><em>ON YOUR BEHALF.</em></h2>
+              <p className="section-label">03 / Showing up</p>
+              <h2>THE JOB IS<br />TO <em>SHOW UP.</em></h2>
             </div>
             <div className="pledge-copy">
-              <p className="pledge-opening">We partner with organizations that do good and strive to be better.</p>
+              <p className="pledge-opening">For Tony, broadcasting is public service. Every listener has chosen to give him part of their day. That means something.</p>
               <div className="pledge-list">
-                <article><span>01</span><p>We are collaborative. When decision time arrives, we&apos;ll help you recognize it.</p></article>
-                <article><span>02</span><p>If your decision is based on price alone, we are not for you.</p></article>
-                <article><span>03</span><p>Whatever your project, we can do good together.</p></article>
+                <article><span>01</span><p>Over decades on the air, listeners have heard Tony through ordinary days and hard ones—fires, hurricanes, September 11, and wars.</p></article>
+                <article><span>02</span><p>That consistency builds trust. Tony describes the relationship simply: you become “part of the family.”</p></article>
+                <article><span>03</span><p>He has learned that when people actually talk with each other, they can accomplish more than they often realize.</p></article>
               </div>
             </div>
           </div>
@@ -220,9 +226,9 @@ export default function Home() {
           <div className="contact-signal" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
           <div className="section-shell contact-grid">
             <div className="contact-copy">
-              <p className="section-label">04 / Why Tony</p>
-              <h2>WHY WORK<br /><em>WITH TONY?</em></h2>
-              <p>Because a voice can only carry what it understands. Tony brings judgment, warmth, and the kind of care that makes people believe what they hear. He loves the work—and wants to know why you love yours.</p>
+              <p className="section-label">04 / Bring Tony to your audience</p>
+              <h2>YOUR STORY<br /><em>COMES FIRST.</em></h2>
+              <p>Tony has spent a career telling stories. The first thing he wants to know is yours. He asks what you do, how it works, and why it matters—then builds the conversation around the people in the room.</p>
               <span className="slogan-stamp contact-signature">AT MY JOB AND LOVING IT™</span>
               <div className="direct-contact">
                 <a href="tel:+18032919844">803.291.9844</a>
@@ -232,14 +238,14 @@ export default function Home() {
 
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-heading"><strong>TELL ME WHY YOU LOVE THE WORK</strong><span>↗</span></div>
-              <p className="form-intro">The best partnerships start with caring. Tell Tony what makes your work worth showing up for.</p>
+              <p className="form-intro">Every audience and every situation is different. Tell Tony what makes your work worth showing up for.</p>
               <div className="form-row">
                 <label>Your name<input name="name" autoComplete="name" required /></label>
                 <label>Organization<input name="organization" autoComplete="organization" /></label>
               </div>
               <label>Email<input type="email" name="email" autoComplete="email" required /></label>
               <label>What do you love about what you do?<textarea name="message" rows={6} placeholder="Tell Tony what makes the work matter to you, who it helps, and why it deserves to be heard." required /></label>
-              <button className="button form-submit" type="submit">Let&apos;s do good together <span>↗</span></button>
+              <button className="button form-submit" type="submit">Bring Tony to the room <span>↗</span></button>
               <p className={submitted ? 'form-note success' : 'form-note'} aria-live="polite">
                 {submitted ? 'Thank you for sharing what drives you. This preview form is ready to be connected to Tony’s inbox.' : 'Preview form—delivery will be connected before launch.'}
               </p>
