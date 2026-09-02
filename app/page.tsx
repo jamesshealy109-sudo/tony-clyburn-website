@@ -1,8 +1,18 @@
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import AudioIntro from './components/AudioIntro';
 import InquiryForms from './components/InquiryForms';
+import JsonLd from './components/JsonLd';
+import SiteFooter from './components/SiteFooter';
+import SiteHeader from './components/SiteHeader';
+import { absoluteUrl, createPageMetadata, sitePath } from './lib/site';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
+const homeTitle = 'Tony Clyburn | Speaker & Broadcaster | At My Job And Loving It™';
+const homeDescription = 'Tony Clyburn is a Columbia, South Carolina broadcaster, storyteller and speaker behind At My Job And Loving It™. Bring his curiosity to your audience.';
+
+export const metadata: Metadata = createPageMetadata({ title: homeTitle, description: homeDescription });
 
 const storySteps = [
   ['01', 'Working people', 'That is where Tony comes from.'],
@@ -20,20 +30,19 @@ const speakingPrinciples = [
 export default function Home() {
   return (
     <main>
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        '@id': `${absoluteUrl('/')}#webpage`,
+        url: absoluteUrl('/'),
+        name: homeTitle,
+        description: homeDescription,
+        isPartOf: { '@id': `${absoluteUrl('/')}#website` },
+        about: { '@id': `${absoluteUrl('/')}#tony-clyburn` },
+        inLanguage: 'en-US',
+      }} />
       <a className="skip-link" href="#content">Skip to content</a>
-
-      <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Tony Clyburn home">
-          <strong>TONY CLYBURN</strong>
-          <span>AT MY JOB AND LOVING IT™</span>
-        </a>
-        <nav aria-label="Primary navigation">
-          <a href="#story">Tony&apos;s story</a>
-          <a href="#amjali">AMJALI</a>
-          <a href="#speaking">Speaking</a>
-          <a className="nav-cta" href="#booking">Book Tony <span aria-hidden="true">↗</span></a>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <div id="content">
         <section className="hero" id="top">
@@ -44,8 +53,8 @@ export default function Home() {
             <p className="hero-role">Broadcaster. Storyteller. Speaker.</p>
             <p className="hero-lede">For decades, Tony Clyburn has made a living talking with people. Somewhere along the way, he learned the most important part of the job was listening.</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#booking">Bring Tony to your audience</a>
-              <a className="button button-quiet" href="#story">Hear the story <span aria-hidden="true">↓</span></a>
+              <a className="button button-primary" href={sitePath('/contact/#booking')}>Bring Tony to your audience</a>
+              <a className="button button-quiet" href={sitePath('/story/')}>Hear Tony&apos;s story <span aria-hidden="true">→</span></a>
             </div>
             <AudioIntro />
           </div>
@@ -83,6 +92,7 @@ export default function Home() {
               <p className="chapter-end">HE WANTED TO BE IN RADIO BADLY ENOUGH TO DO THE PART NOBODY SAW.</p>
             </div>
           </div>
+          <a className="editorial-link" href={sitePath('/story/')}>Read Tony Clyburn&apos;s full story <span aria-hidden="true">→</span></a>
         </section>
 
         <section className="radio-transition" aria-label="Tony's path into radio">
@@ -170,7 +180,7 @@ export default function Home() {
           <div className="custom-note">
             <p>Tony doesn&apos;t believe every room needs the same speech.</p>
             <p>Every organization has its own people. Its own work. Its own story. That&apos;s where he starts.</p>
-            <a className="button button-primary" href="#booking">Bring Tony to your audience</a>
+            <a className="button button-primary" href={sitePath('/speaking/')}>Explore speaking engagements</a>
           </div>
         </section>
 
@@ -199,33 +209,12 @@ export default function Home() {
           <blockquote>WHAT&apos;S YOURS?</blockquote>
           <div>
             <a className="button button-light" href="#booking">Bring Tony to your audience</a>
-            <a className="button button-outline" href="#your-story">Tell Tony your story</a>
+            <a className="button button-outline" href={sitePath('/contact/#your-story')}>Tell Tony your story</a>
           </div>
         </section>
       </div>
 
-      <footer>
-        <a className="wordmark" href="#top"><strong>TONY CLYBURN</strong><span>AT MY JOB AND LOVING IT™</span></a>
-        <div className="footer-nav"><a href="#story">Story</a><a href="#speaking">Speaking</a><span>Media · coming later</span><span>Shop · coming later</span><a href="#booking">Contact</a></div>
-        <div className="footer-contact">
-          <a href="tel:+18032919844">803.291.9844</a>
-          <span>West Columbia, South Carolina</span>
-          <a className="strataworks-mark" href="https://strataworks.tech" target="_blank" rel="noreferrer" aria-label="Visit StrataWorks">
-            <span>Site by</span>
-            <Image src={`${basePath}/images/marks/strataworks-logo.png`} alt="StrataWorks — Precision. Performance. Partnership." width={170} height={117} />
-          </a>
-        </div>
-        <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Tony Clyburn</span>
-          <div className="footer-socials">
-            <a href="https://facebook.com/TonyClyburnSC" target="_blank" rel="noreferrer">Facebook ↗</a>
-            <a href="https://twitter.com/myjobandlovinit" target="_blank" rel="noreferrer">X / Twitter ↗</a>
-            <a className="f3-social" href="https://f3midlands.com/" target="_blank" rel="noreferrer" aria-label="Visit F3 Midlands">
-              <Image src={`${basePath}/images/marks/f3-midlands-logo.png`} alt="F3 Midlands" width={30} height={30} />
-            </a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
