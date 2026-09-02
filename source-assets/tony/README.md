@@ -13,3 +13,5 @@ These original files are preserved exactly as supplied. Web-ready derivatives li
 | `Tony webspace 131 (2).tif` | `tony-listening-archive.webp` | Community and curiosity |
 
 The dry-cleaning interior, Columbia street/classic car, and small 2001 event photo remain preserved here but are intentionally not used on the homepage because the supplied context is not strong enough to connect them directly to Tony's story.
+
+`amjali-favicon-source.webp` is the original AMJALI artwork supplied for the browser favicon. Cropped browser-ready derivatives are stored at `public/favicon.ico`, `public/favicon.png`, and `public/apple-touch-icon.png`.

@@ -8,7 +8,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Tony Clyburn | At My Job and Loving It™',
   description: 'Meet Tony Clyburn—the broadcaster, storyteller, and speaker behind At My Job And Loving It™.',
-  icons: { icon: `${basePath}/favicon.svg` },
+  icons: {
+    icon: [
+      { url: `${basePath}/favicon.ico`, sizes: 'any' },
+      { url: `${basePath}/favicon.png`, type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [{ url: `${basePath}/apple-touch-icon.png`, sizes: '180x180', type: 'image/png' }],
+  },
   openGraph: {
     title: 'Tony Clyburn | At My Job and Loving It™',
     description: 'Broadcaster. Storyteller. Speaker. A career built on service, trust, curiosity, and showing up.',
