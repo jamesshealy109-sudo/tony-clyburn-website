@@ -6,11 +6,11 @@ export default function SiteFooter() {
     <footer>
       <a className="wordmark" href={sitePath('/')}><strong>TONY CLYBURN</strong><span>AT MY JOB AND LOVING IT™</span></a>
       <div className="footer-nav">
-        <a href={sitePath('/story/')}>Story</a>
+        <a href={sitePath('/services/')}>Services</a>
+        <a href={sitePath('/story/')}>Tony&apos;s story</a>
+        <a href={sitePath('/amjali/')}>At My Job And Loving It</a>
         <a href={sitePath('/speaking/')}>Speaking</a>
         <a href={sitePath('/contact/')}>Contact</a>
-        <span>Media · coming later</span>
-        <span>Shop · coming later</span>
       </div>
       <div className="footer-contact">
         <a href="tel:+18032919844">803.291.9844</a>

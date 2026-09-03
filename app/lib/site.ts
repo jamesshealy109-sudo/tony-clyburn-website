@@ -56,4 +56,4 @@ export function createPageMetadata({ title, description, path = '/' }: PageMetad
   };
 }
 
-export const publicRoutes = ['/', '/speaking/', '/story/', '/contact/'] as const;
+export const publicRoutes = ['/', '/services/', '/speaking/', '/story/', '/amjali/', '/contact/'] as const;

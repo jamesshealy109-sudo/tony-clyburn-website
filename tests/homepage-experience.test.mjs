@@ -19,7 +19,7 @@ test('puts the project-selection experience directly after the hero', async () =
   assert.ok(heroEnd >= 0, 'the homepage should render its hero');
   assert.ok(projectSelector > heroEnd, 'project selection should follow the hero');
   assert.ok(story > projectSelector, 'project selection should precede the story');
-  assert.match(html, /href="#project-fit"/);
+  assert.match(html, /href="\/services\/"/);
 });
 
 test('renders one inquiry route for every approved project category', async () => {
@@ -30,7 +30,8 @@ test('renders one inquiry route for every approved project category', async () =
     'business-audio',
     'emcee-host',
     'speaker-moderator',
-    'other-audio',
+    'podcast-audio',
+    'other-project',
   ];
 
   for (const slug of projectSlugs) {

@@ -7,6 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return publicRoutes.map((route) => ({
     url: absoluteUrl(route),
     changeFrequency: route === '/' ? 'monthly' : 'yearly',
-    priority: route === '/' ? 1 : route === '/speaking/' ? 0.9 : 0.7,
+    priority: route === '/' ? 1 : route === '/services/' || route === '/amjali/' ? 0.9 : route === '/speaking/' ? 0.8 : 0.7,
   }));
 }

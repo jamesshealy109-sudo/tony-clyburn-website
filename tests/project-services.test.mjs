@@ -20,7 +20,8 @@ test('offers each approved commercial project path exactly once', () => {
     'business-audio',
     'emcee-host',
     'speaker-moderator',
-    'other-audio',
+    'podcast-audio',
+    'other-project',
   ]);
   assert.equal(new Set(slugs).size, slugs.length);
 });
@@ -40,4 +41,15 @@ test('accepts only a supported project value from the URL', () => {
   assert.equal(services.normalizeProjectType('voiceover'), 'voiceover');
   assert.equal(services.normalizeProjectType('not-a-real-service'), '');
   assert.equal(services.normalizeProjectType(null), '');
+});
+
+test('maps project choices to the right supplemental inquiry group', () => {
+  assert.equal(services.projectFieldGroup('voiceover'), 'voice');
+  assert.equal(services.projectFieldGroup('commercial-voiceover'), 'voice');
+  assert.equal(services.projectFieldGroup('emcee-host'), 'event');
+  assert.equal(services.projectFieldGroup('speaker-moderator'), 'event');
+  assert.equal(services.projectFieldGroup('podcast-audio'), 'podcast');
+  assert.equal(services.projectFieldGroup('business-audio'), 'none');
+  assert.equal(services.projectFieldGroup('other-project'), 'none');
+  assert.equal(services.projectFieldGroup(''), 'none');
 });

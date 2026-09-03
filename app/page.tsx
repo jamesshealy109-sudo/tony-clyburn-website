@@ -54,7 +54,7 @@ export default function Home() {
             <p className="hero-role">Broadcaster. Voiceover. Host. Speaker.</p>
             <p className="hero-lede">For decades, Tony Clyburn has made a living talking with people. He learned the most important part of the job is listening.</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#project-fit">Find the right service</a>
+              <a className="button button-primary" href={sitePath('/services/')}>Find the right service</a>
               <a className="button button-quiet" href={sitePath('/story/')}>Read Tony&apos;s story <span aria-hidden="true">→</span></a>
             </div>
             <AudioIntro />
@@ -126,6 +126,7 @@ export default function Home() {
           <div className="origin-story">
             <p className="large">A PHRASE BECAME A CONVERSATION.</p>
             <p>Maybe you know the feeling. You have work worth doing, people who count on you, and a reason you keep showing up.</p>
+            <a className="editorial-link" href={sitePath('/amjali/')}>Explore At My Job And Loving It <span aria-hidden="true">→</span></a>
           </div>
         </section>
 
@@ -138,7 +139,7 @@ export default function Home() {
             <h2>THE PHRASE<br /><em>BECAME A BRAND.</em></h2>
             <p>Other people made the phrase their own. It is an invitation to say what you do, why it matters, and what keeps you at it.</p>
             <DymoLabel className="dymo-label-brand" />
-            <div className="future-link"><span>SHOP AMJALI</span><small>Future collection</small></div>
+            <a className="future-link" href={sitePath('/amjali/#collection')}><span>EXPLORE AMJALI</span><small>The conversation and collection</small></a>
           </div>
         </section>
 
@@ -190,7 +191,7 @@ export default function Home() {
           <div className="custom-note">
             <p>No two projects need exactly the same voice.</p>
             <p>Tell Tony what you are working on. He will ask questions, help clarify the message, and meet the format where it is.</p>
-            <a className="button button-primary" href={sitePath('/contact/#booking')}>Tell Tony about your project</a>
+            <a className="button button-primary" href={sitePath('/services/')}>Explore services</a>
           </div>
         </section>
 
@@ -212,7 +213,7 @@ export default function Home() {
           <h2>YOU KNOW WHAT YOU WANT PEOPLE TO HEAR.<br />LET&apos;S FIND THE RIGHT WAY TO SAY IT.</h2>
           <blockquote>WHAT ARE YOU<br />WORKING ON?</blockquote>
           <div>
-            <a className="button button-light" href="#booking">Tell Tony about your project</a>
+            <a className="button button-light" href={sitePath('/contact/#booking')}>Tell Tony about your project</a>
             <a className="button button-outline" href={sitePath('/contact/#your-story')}>Tell Tony your story</a>
           </div>
         </section>

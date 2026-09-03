@@ -8,9 +8,9 @@ export default function SiteHeader() {
         <span>AT MY JOB AND LOVING IT™</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href={sitePath('/#project-fit')}>Services</a>
+        <a href={sitePath('/services/')}>Services</a>
         <a href={sitePath('/story/')}>Tony&apos;s story</a>
-        <a href={sitePath('/speaking/')}>Speaking</a>
+        <a href={sitePath('/amjali/')}>At My Job And Loving It</a>
         <a href={sitePath('/contact/')}>Contact</a>
         <a className="nav-cta" href={sitePath('/contact/#booking')}>Start a project <span aria-hidden="true">↗</span></a>
       </nav>

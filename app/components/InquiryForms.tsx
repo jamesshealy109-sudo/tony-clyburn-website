@@ -1,7 +1,8 @@
 'use client';
 
-import { FormEvent, useEffect, useRef, useState } from 'react';
-import { normalizeProjectType, projectServices } from '@/app/lib/projectServices';
+import { FormEvent, useState, useSyncExternalStore } from 'react';
+import ProjectInquiryFields from '@/app/components/ProjectInquiryFields';
+import { normalizeProjectType, projectServices, type ProjectType } from '@/app/lib/projectServices';
 
 function usePreviewForm() {
   const [sent, setSent] = useState(false);
@@ -12,15 +13,24 @@ function usePreviewForm() {
   return { sent, submit };
 }
 
+function subscribeToLocation() {
+  return () => {};
+}
+
+function getProjectFromLocation() {
+  return normalizeProjectType(new URLSearchParams(window.location.search).get('project'));
+}
+
+function getServerProject(): ProjectType | '' {
+  return '';
+}
+
 export default function InquiryForms() {
   const booking = usePreviewForm();
   const story = usePreviewForm();
-  const projectTypeRef = useRef<HTMLSelectElement>(null);
-
-  useEffect(() => {
-    const projectType = normalizeProjectType(new URLSearchParams(window.location.search).get('project'));
-    if (projectTypeRef.current && projectType) projectTypeRef.current.value = projectType;
-  }, []);
+  const queryProjectType = useSyncExternalStore(subscribeToLocation, getProjectFromLocation, getServerProject);
+  const [selectedProjectType, setSelectedProjectType] = useState<ProjectType | ''>('');
+  const projectType = selectedProjectType || queryProjectType;
 
   return (
     <section className="inquiries section" aria-labelledby="inquiries-title">
@@ -31,18 +41,29 @@ export default function InquiryForms() {
       </div>
 
       <form className="booking-form" id="booking" onSubmit={booking.submit}>
-        <div className="form-title"><span>01</span><div><h3>Project inquiry</h3><p>Tell Tony what you are making, planning, or trying to communicate.</p></div></div>
+        <div className="form-title"><span>01</span><div><h3>Project inquiry</h3><p>What are you working on?</p></div></div>
         <div className="field-grid">
           <label>Name<input name="name" autoComplete="name" required /></label>
           <label>Organization<input name="organization" autoComplete="organization" /></label>
           <label>Email<input type="email" name="email" autoComplete="email" required /></label>
           <label>Phone<input type="tel" name="phone" autoComplete="tel" /></label>
-          <label className="full">Project type<select ref={projectTypeRef} name="projectType" defaultValue="" required><option value="" disabled>Choose the closest fit</option>{projectServices.map(({ slug, title }) => <option key={slug} value={slug}>{title}</option>)}</select></label>
-          <label>Project timing<input name="projectTiming" placeholder="Date or general timeframe" /></label>
-          <label>Where will it be heard or experienced?<input name="projectSetting" placeholder="Radio, event, phone system, podcast…" /></label>
-          <label className="full">What are you working on?<textarea name="projectSummary" rows={5} required /></label>
-          <label className="full">What should people hear, feel, or understand?<textarea name="projectGoal" rows={4} /></label>
-          <label className="full">Budget or production parameters (optional)<input name="budgetParameters" /></label>
+          <label className="full">What are you working on?
+            <select name="projectType" value={projectType} onChange={(event) => setSelectedProjectType(normalizeProjectType(event.target.value))} required>
+              <option value="" disabled>Choose the closest fit</option>
+              {projectServices.map(({ slug, label }) => <option key={slug} value={slug}>{label}</option>)}
+            </select>
+          </label>
+          <ProjectInquiryFields projectType={projectType} />
+          <label className="full">Project description<textarea name="projectDescription" rows={6} required placeholder="Tell Tony what you are trying to accomplish, who it is for, and what people should hear, feel, or understand." /></label>
+          <label>Desired date / deadline<input name="desiredTiming" placeholder="Date or general timeframe" /></label>
+          <label>Budget (optional)<input name="budget" inputMode="decimal" /></label>
+          <label className="full">Preferred contact method
+            <select name="preferredContact" defaultValue="email">
+              <option value="email">Email</option>
+              <option value="phone">Phone</option>
+              <option value="either">Either</option>
+            </select>
+          </label>
         </div>
         <button className="button button-primary" type="submit">Send project inquiry</button>
         <p className={`form-status ${booking.sent ? 'success' : ''}`} aria-live="polite">{booking.sent ? 'Thanks—this inquiry is ready to send once Tony’s email connection is added.' : 'Preview form · email delivery connection still to come.'}</p>

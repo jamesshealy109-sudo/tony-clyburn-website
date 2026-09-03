@@ -7,10 +7,10 @@ import { absoluteUrl, basePath, siteName, siteUrl } from './lib/site';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Tony Clyburn | Speaker & Broadcaster | At My Job And Loving It™',
+    default: 'Tony Clyburn | Voiceover, Host & Broadcaster | AMJALI™',
     template: '%s | Tony Clyburn',
   },
-  description: 'Tony Clyburn is a Columbia, South Carolina broadcaster, storyteller and speaker behind At My Job And Loving It™. Bring his curiosity to your audience.',
+  description: 'Tony Clyburn is a broadcaster, voiceover professional, emcee and host, speaker, moderator and storyteller behind At My Job And Loving It™.',
   applicationName: siteName,
   category: 'Business',
   icons: {
@@ -35,8 +35,8 @@ const entityGraph = {
       name: 'Tony Clyburn',
       url: absoluteUrl('/'),
       image: absoluteUrl('/images/story/tony-hero-columbia.webp'),
-      jobTitle: 'Broadcaster, Storyteller, Speaker',
-      description: 'Tony Clyburn is the 93.1 The Lake afternoon host and the broadcaster, storyteller and speaker behind At My Job And Loving It™.',
+      jobTitle: 'Broadcaster, Voiceover Professional, Emcee and Host, Speaker',
+      description: 'Tony Clyburn is the 93.1 The Lake afternoon host and a voiceover professional, emcee and host, speaker, moderator and storyteller.',
       homeLocation: {
         '@type': 'Place',
         address: {
@@ -48,7 +48,7 @@ const entityGraph = {
       },
       worksFor: { '@type': 'Organization', name: '93.1 The Lake' },
       award: 'South Carolina Broadcasters Association Radio Personality of the Year, 2006',
-      knowsAbout: ['Broadcasting', 'Storytelling', 'Communication', 'Community engagement'],
+      knowsAbout: ['Broadcasting', 'Voiceover', 'Event hosting', 'Speaking', 'Moderated conversation', 'Storytelling', 'Communication'],
       sameAs: ['https://facebook.com/TonyClyburnSC', 'https://twitter.com/myjobandlovinit'],
     },
     {

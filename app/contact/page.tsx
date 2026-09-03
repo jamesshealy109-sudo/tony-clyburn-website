@@ -45,7 +45,7 @@ export default function ContactPage() {
           <p className="section-kicker">Before you send</p>
           <h2>HELP TONY<br /><em>UNDERSTAND THE ROOM.</em></h2>
           <p>Share the audience, timing, setting, and what you want people to hear, feel, or understand. Tony can help clarify the rest with you.</p>
-          <a className="editorial-link" href={sitePath('/#project-fit')}>Review Tony&apos;s services <span aria-hidden="true">→</span></a>
+          <a className="editorial-link" href={sitePath('/services/')}>Review Tony&apos;s services <span aria-hidden="true">→</span></a>
         </section>
       </div>
       <SiteFooter />

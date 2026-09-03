@@ -24,7 +24,7 @@ const faqs = [
   ['Does Tony customize his speaking engagements?', 'Yes. Tony starts by learning about the people in the room, their work and what the organization wants the audience to carry forward. He does not begin with a canned keynote.'],
   ['Where is Tony Clyburn based?', 'Tony Clyburn is based in West Columbia, South Carolina, in the Columbia area.'],
   ['Does Tony travel for speaking engagements?', 'Include the event location in your inquiry. Travel and availability are confirmed for each engagement rather than assumed.'],
-  ['How do I book Tony Clyburn?', 'Send a booking inquiry with your date, location, audience and goals. Tony’s team can then follow up about fit, availability and next steps.'],
+  ['How do I book Tony Clyburn?', 'Send a booking inquiry with your date, location, audience and goals. Tony can then follow up about fit, availability and next steps.'],
   ['What does “At My Job And Loving It” mean?', 'It began as something Tony said. People started saying it back and telling him what they did. The phrase became an invitation to talk about work, pride, purpose and the stories behind a job.'],
 ];
 
@@ -114,7 +114,7 @@ export default function SpeakingPage() {
             <h2>START WITH<br /><em>THE ROOM.</em></h2>
             <ol className="process-grid">
               <li><span>01</span><h3>Share the context</h3><p>Send the date, location, audience, event format and the experience you want to create.</p></li>
-              <li><span>02</span><h3>Talk about fit</h3><p>Tony&apos;s team follows up about availability, goals and the shape of the engagement.</p></li>
+              <li><span>02</span><h3>Talk about fit</h3><p>Tony follows up about availability, goals and the shape of the engagement.</p></li>
               <li><span>03</span><h3>Build the conversation</h3><p>Tony learns about the people in the room and prepares around what matters to them.</p></li>
             </ol>
           </div>

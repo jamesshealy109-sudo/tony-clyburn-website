@@ -72,7 +72,7 @@ export default function StoryPage() {
             <div><p className="section-kicker">Radio as service</p><h2>THE JOB IS<br /><em>TO SHOW UP.</em></h2></div>
             <div className="prose-stack">
               <p>People do not owe a broadcaster their time. If somebody chooses to spend part of a commute, a workday or a drive home listening, Tony believes the voice on the other side owes them something in return.</p>
-              <p>He has shown up through ordinary days and the days nobody expected—through storms, fires, September 11, wars and moments that changed the conversation. Over time, a voice on the radio can become familiar. Tony calls it becoming part of the family.</p>
+              <p>He has shown up through ordinary days and the days nobody expected. Over time, a voice on the radio can become familiar. Tony calls it becoming part of the family.</p>
               <p>Today, Tony Clyburn is the afternoon host at 93.1 The Lake. In 2006, the South Carolina Broadcasters Association named him Radio Personality of the Year.</p>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default function StoryPage() {
           </div>
         </section>
 
-        <section className="final-cta"><p>AT MY JOB AND LOVING IT™</p><h2>THE NEXT CONVERSATION STARTS WITH A QUESTION.</h2><blockquote>WHAT&apos;S YOURS?</blockquote><div><a className="button button-light" href={sitePath('/contact/#your-story')}>Tell Tony your story</a><a className="button button-outline" href={sitePath('/speaking/')}>Bring Tony to your audience</a></div></section>
+        <section className="final-cta"><p>AT MY JOB AND LOVING IT™</p><h2>THE NEXT CONVERSATION STARTS WITH A QUESTION.</h2><blockquote>WHAT&apos;S YOURS?</blockquote><div><a className="button button-light" href={sitePath('/contact/#your-story')}>Tell Tony your story</a><a className="button button-outline" href={sitePath('/amjali/')}>Explore the phrase</a></div></section>
       </div>
       <SiteFooter />
     </main>
