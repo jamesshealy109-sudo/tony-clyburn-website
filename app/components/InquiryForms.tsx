@@ -1,6 +1,7 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useRef, useState } from 'react';
+import { normalizeProjectType, projectServices } from '@/app/lib/projectServices';
 
 function usePreviewForm() {
   const [sent, setSent] = useState(false);
@@ -14,30 +15,36 @@ function usePreviewForm() {
 export default function InquiryForms() {
   const booking = usePreviewForm();
   const story = usePreviewForm();
+  const projectTypeRef = useRef<HTMLSelectElement>(null);
+
+  useEffect(() => {
+    const projectType = normalizeProjectType(new URLSearchParams(window.location.search).get('project'));
+    if (projectTypeRef.current && projectType) projectTypeRef.current.value = projectType;
+  }, []);
 
   return (
     <section className="inquiries section" aria-labelledby="inquiries-title">
       <div className="inquiry-heading">
         <p className="section-kicker">07 / Start a conversation</p>
-        <h2 id="inquiries-title">TWO REASONS<br /><em>TO REACH OUT.</em></h2>
-        <p>Planning an event and sharing your own story are different conversations. Choose the one that fits.</p>
+        <h2 id="inquiries-title">TWO WAYS<br /><em>TO BEGIN.</em></h2>
+        <p>Bring Tony a project, or tell him about the work you love. Either way, the conversation starts with listening.</p>
       </div>
 
       <form className="booking-form" id="booking" onSubmit={booking.submit}>
-        <div className="form-title"><span>01</span><div><h3>Speaking / booking inquiry</h3><p>Tell us about the room Tony would be walking into.</p></div></div>
+        <div className="form-title"><span>01</span><div><h3>Project inquiry</h3><p>Tell Tony what you are making, planning, or trying to communicate.</p></div></div>
         <div className="field-grid">
           <label>Name<input name="name" autoComplete="name" required /></label>
           <label>Organization<input name="organization" autoComplete="organization" /></label>
           <label>Email<input type="email" name="email" autoComplete="email" required /></label>
           <label>Phone<input type="tel" name="phone" autoComplete="tel" /></label>
-          <label>Event date<input type="date" name="eventDate" /></label>
-          <label>Event location<input name="eventLocation" autoComplete="address-level2" /></label>
-          <label>Type of event<input name="eventType" /></label>
-          <label>Approximate audience size<input type="number" name="audienceSize" min="1" /></label>
-          <label className="full">What do you want your audience to experience?<textarea name="audienceExperience" rows={5} required /></label>
-          <label className="full">Estimated speaker budget<select name="budget" defaultValue=""><option value="" disabled>Select a range</option><option>Under $2,500</option><option>$2,500–$5,000</option><option>$5,000–$10,000</option><option>$10,000+</option><option>Let&apos;s discuss</option></select></label>
+          <label className="full">Project type<select ref={projectTypeRef} name="projectType" defaultValue="" required><option value="" disabled>Choose the closest fit</option>{projectServices.map(({ slug, title }) => <option key={slug} value={slug}>{title}</option>)}</select></label>
+          <label>Project timing<input name="projectTiming" placeholder="Date or general timeframe" /></label>
+          <label>Where will it be heard or experienced?<input name="projectSetting" placeholder="Radio, event, phone system, podcast…" /></label>
+          <label className="full">What are you working on?<textarea name="projectSummary" rows={5} required /></label>
+          <label className="full">What should people hear, feel, or understand?<textarea name="projectGoal" rows={4} /></label>
+          <label className="full">Budget or production parameters (optional)<input name="budgetParameters" /></label>
         </div>
-        <button className="button button-primary" type="submit">Send booking inquiry</button>
+        <button className="button button-primary" type="submit">Send project inquiry</button>
         <p className={`form-status ${booking.sent ? 'success' : ''}`} aria-live="polite">{booking.sent ? 'Thanks—this inquiry is ready to send once Tony’s email connection is added.' : 'Preview form · email delivery connection still to come.'}</p>
       </form>
 
