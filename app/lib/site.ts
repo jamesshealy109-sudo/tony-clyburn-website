@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
-const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.tonyclyburn.com';
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://atmyjobandlovingit.com';
 
 export const siteUrl = configuredSiteUrl.replace(/\/$/, '');
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
-export const siteName = 'Tony Clyburn';
+export const siteName = 'At My Job And Loving It™';
 export const socialImagePath = '/tony-clyburn-social-preview.webp';
 
 export function sitePath(path = '/') {
@@ -44,7 +44,7 @@ export function createPageMetadata({ title, description, path = '/' }: PageMetad
         url: image,
         width: 1200,
         height: 630,
-        alt: 'Tony Clyburn — At My Job And Loving It, broadcaster, storyteller and speaker',
+        alt: 'At My Job And Loving It — What do you do, and why do you love it?',
       }],
     },
     twitter: {
@@ -56,4 +56,4 @@ export function createPageMetadata({ title, description, path = '/' }: PageMetad
   };
 }
 
-export const publicRoutes = ['/', '/services/', '/speaking/', '/story/', '/amjali/', '/contact/'] as const;
+export const publicRoutes = ['/', '/podcast/', '/amjali/', '/story/', '/services/', '/speaking/', '/contact/'] as const;

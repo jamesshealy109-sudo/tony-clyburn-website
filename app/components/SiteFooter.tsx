@@ -4,13 +4,16 @@ import { basePath, sitePath } from '@/app/lib/site';
 export default function SiteFooter() {
   return (
     <footer>
-      <a className="wordmark" href={sitePath('/')}><strong>TONY CLYBURN</strong><span>AT MY JOB AND LOVING IT™</span></a>
+      <a className="wordmark" href={sitePath('/')}><strong>AT MY JOB AND LOVING IT™</strong><span>AMJALI · STORIES ABOUT WORK</span></a>
       <div className="footer-nav">
-        <a href={sitePath('/services/')}>Services</a>
-        <a href={sitePath('/story/')}>Tony&apos;s story</a>
-        <a href={sitePath('/amjali/')}>At My Job And Loving It</a>
+        <a href={sitePath('/podcast/')}>Podcast</a>
+        <a href={sitePath('/contact/#your-story')}>Tell Your Story</a>
+        <a href={sitePath('/amjali/')}>About AMJALI</a>
+        <a href={sitePath('/story/')}>Meet Tony</a>
+        <a href={sitePath('/services/')}>Tony&apos;s Services</a>
         <a href={sitePath('/speaking/')}>Speaking</a>
-        <a href={sitePath('/contact/')}>Contact</a>
+        <a href={sitePath('/contact/#booking')}>Professional Inquiries</a>
+        <a href={sitePath('/amjali/#collection')}>Collection · Coming Soon</a>
       </div>
       <div className="footer-contact">
         <a href="tel:+18032919844">803.291.9844</a>
@@ -21,7 +24,7 @@ export default function SiteFooter() {
         </a>
       </div>
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Tony Clyburn</span>
+        <span>© {new Date().getFullYear()} At My Job And Loving It™</span>
         <div className="footer-socials">
           <a href="https://facebook.com/TonyClyburnSC" target="_blank" rel="noreferrer">Facebook ↗</a>
           <a href="https://twitter.com/myjobandlovinit" target="_blank" rel="noreferrer">X / Twitter ↗</a>

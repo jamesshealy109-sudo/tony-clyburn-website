@@ -7,10 +7,10 @@ import { absoluteUrl, basePath, siteName, siteUrl } from './lib/site';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Tony Clyburn | Voiceover, Host & Broadcaster | AMJALI™',
-    template: '%s | Tony Clyburn',
+    default: 'At My Job And Loving It™ | Stories About Work',
+    template: '%s | At My Job And Loving It™',
   },
-  description: 'Tony Clyburn is a broadcaster, voiceover professional, emcee and host, speaker, moderator and storyteller behind At My Job And Loving It™.',
+  description: 'What do you do—and why do you love it? Share your story with At My Job And Loving It™, hosted by broadcaster Tony Clyburn.',
   applicationName: siteName,
   category: 'Business',
   icons: {
@@ -29,6 +29,15 @@ export const metadata: Metadata = {
 const entityGraph = {
   '@context': 'https://schema.org',
   '@graph': [
+    {
+      '@type': 'Brand',
+      '@id': `${absoluteUrl('/')}#amjali-brand`,
+      name: 'At My Job And Loving It',
+      alternateName: 'AMJALI',
+      url: absoluteUrl('/'),
+      slogan: 'What do you do—and why do you love it?',
+      founder: { '@id': `${absoluteUrl('/')}#tony-clyburn` },
+    },
     {
       '@type': 'Person',
       '@id': `${absoluteUrl('/')}#tony-clyburn`,
@@ -56,8 +65,10 @@ const entityGraph = {
       '@id': `${absoluteUrl('/')}#website`,
       url: absoluteUrl('/'),
       name: siteName,
-      description: 'The official website of Tony Clyburn and At My Job And Loving It™.',
+      description: 'Stories and conversations about the work people do and why they love it, hosted by Tony Clyburn.',
       inLanguage: 'en-US',
+      about: { '@id': `${absoluteUrl('/')}#amjali-brand` },
+      creator: { '@id': `${absoluteUrl('/')}#tony-clyburn` },
       publisher: { '@id': `${absoluteUrl('/')}#tony-clyburn` },
     },
   ],

@@ -35,13 +35,30 @@ export default function InquiryForms() {
   return (
     <section className="inquiries section" aria-labelledby="inquiries-title">
       <div className="inquiry-heading">
-        <p className="section-kicker">07 / Start a conversation</p>
+        <p className="section-kicker">Choose your path</p>
         <h2 id="inquiries-title">TWO WAYS<br /><em>TO BEGIN.</em></h2>
-        <p>Bring Tony a project, or tell him about the work you love. Either way, the conversation starts with listening.</p>
+        <p>Share a story for the AMJALI conversation, or contact Tony about professional work. Each path has its own form.</p>
       </div>
 
+      <form className="story-form" id="your-story" onSubmit={story.submit}>
+        <div className="form-title"><span>01</span><div><h3>Tell us your story</h3><p>What do you do—and why do you love it?</p></div></div>
+        <label>Name<input name="storyName" autoComplete="name" required /></label>
+        <label>Email<input type="email" name="storyEmail" autoComplete="email" required /></label>
+        <label>Phone<input type="tel" name="storyPhone" autoComplete="tel" /></label>
+        <label>City and state<input name="cityState" autoComplete="address-level2" required /></label>
+        <label>Organization or employer (optional)<input name="storyOrganization" autoComplete="organization" /></label>
+        <label>Job / profession<input name="profession" required /></label>
+        <label>What do you do?<textarea name="whatDoYouDo" rows={4} required placeholder="Describe the work in your own words." /></label>
+        <label>Why do you love it?<textarea name="whyLoveIt" rows={5} required placeholder="Tell us about the people, purpose, craft, or moment that keeps you showing up." /></label>
+        <label>What do you wish more people understood about your work?<textarea name="workUnderstanding" rows={4} required /></label>
+        <label>Link to your work (optional)<input type="url" name="storyLink" inputMode="url" placeholder="https://" /></label>
+        <label className="story-consent"><input type="checkbox" name="interviewAcknowledgement" required /><span>I understand that submitting a story does not guarantee an interview or publication.</span></label>
+        <button className="button button-dark" type="submit">Submit Your Story</button>
+        <p className={`form-status ${story.sent ? 'success' : ''}`} aria-live="polite">{story.sent ? 'Thank you for sharing it. This story is ready to send once the email connection is added.' : 'This is a community conversation—not a sales form.'}</p>
+      </form>
+
       <form className="booking-form" id="booking" onSubmit={booking.submit}>
-        <div className="form-title"><span>01</span><div><h3>Project inquiry</h3><p>What are you working on?</p></div></div>
+        <div className="form-title"><span>02</span><div><h3>Project inquiry</h3><p>What are you working on?</p></div></div>
         <div className="field-grid">
           <label>Name<input name="name" autoComplete="name" required /></label>
           <label>Organization<input name="organization" autoComplete="organization" /></label>
@@ -67,16 +84,6 @@ export default function InquiryForms() {
         </div>
         <button className="button button-primary" type="submit">Send project inquiry</button>
         <p className={`form-status ${booking.sent ? 'success' : ''}`} aria-live="polite">{booking.sent ? 'Thanks—this inquiry is ready to send once Tony’s email connection is added.' : 'Preview form · email delivery connection still to come.'}</p>
-      </form>
-
-      <form className="story-form" id="your-story" onSubmit={story.submit}>
-        <div className="form-title"><span>02</span><div><h3>Tell Tony your story</h3><p>What do you do—and why do you love it?</p></div></div>
-        <label>Name<input name="name" autoComplete="name" required /></label>
-        <label>Email<input type="email" name="email" autoComplete="email" required /></label>
-        <label>Job / profession<input name="profession" required /></label>
-        <label>Your story<textarea name="story" rows={7} required placeholder="Tell Tony about the work, the people it serves, and why it matters to you." /></label>
-        <button className="button button-dark" type="submit">Tell Tony your story</button>
-        <p className={`form-status ${story.sent ? 'success' : ''}`} aria-live="polite">{story.sent ? 'Thank you for sharing it. This story is ready to send once Tony’s email connection is added.' : 'This is a community conversation—not a sales form.'}</p>
       </form>
     </section>
   );

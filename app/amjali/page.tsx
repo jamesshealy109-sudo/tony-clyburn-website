@@ -25,13 +25,13 @@ export default function AmjaliPage() {
           name: title,
           description,
           isPartOf: { '@id': `${absoluteUrl('/')}#website` },
-          about: { '@id': `${absoluteUrl('/amjali/')}#brand` },
+          about: { '@id': `${absoluteUrl('/')}#amjali-brand` },
           inLanguage: 'en-US',
         },
         {
           '@context': 'https://schema.org',
           '@type': 'Brand',
-          '@id': `${absoluteUrl('/amjali/')}#brand`,
+          '@id': `${absoluteUrl('/')}#amjali-brand`,
           name: 'At My Job And Loving It',
           alternateName: 'AMJALI',
           description,
@@ -80,7 +80,7 @@ export default function AmjaliPage() {
             <p className="section-kicker">Where the idea stands</p>
             <div className="status-grid">
               <article><span>LIVE NOW</span><h2>The conversation</h2><p>Share what you do and why you love it. Tony remains the person listening, asking questions, and keeping the conversation moving.</p></article>
-              <article><span>IN DEVELOPMENT</span><h2>What it could become</h2><p>A collection, audio ideas, listener stories, and broader community possibilities are being explored. None are being presented as launched programs.</p></article>
+              <article><span>IN DEVELOPMENT</span><h2>The podcast and collection</h2><p>The podcast and collection have a place to grow, while episodes, products, prices, release dates, and listening platforms remain unannounced.</p><a className="editorial-link" href={sitePath('/podcast/')}>Explore the podcast <span aria-hidden="true">→</span></a></article>
             </div>
           </div>
         </section>

@@ -44,6 +44,17 @@ test('project inquiry collects common project details and stays separate from st
   assert.doesNotMatch(html, /Under \$2,500|\$2,500.{0,20}\$5,000|\$10,000\+/s);
 });
 
+test('podcast route explains the format without inventing episodes', async () => {
+  const html = await load('/podcast/');
+
+  assert.match(html, /WHAT DO YOU DO/i);
+  assert.match(html, /WHY DO YOU LOVE IT/i);
+  assert.match(html, /Tony Clyburn/);
+  assert.match(html, /Episodes are coming soon/i);
+  assert.match(html, /href="\/contact\/#your-story"/);
+  assert.doesNotMatch(html, /Episode [0-9]|Listen on Spotify|Apple Podcasts|sponsored by/i);
+});
+
 test('AMJALI route makes the audience-owned phrase primary and labels future ideas honestly', async () => {
   const html = await load('/amjali/');
 
@@ -59,25 +70,28 @@ test('AMJALI route makes the audience-owned phrase primary and labels future ide
   assert.doesNotMatch(html, /Add to cart|Buy now|In stock|\$[0-9]/i);
 });
 
-test('primary navigation separates services, Tony story, AMJALI, and contact', async () => {
-  for (const path of ['/', '/services/', '/story/', '/amjali/', '/contact/']) {
+test('primary navigation presents the exact AMJALI route mapping', async () => {
+  for (const path of ['/', '/podcast/', '/services/', '/story/', '/amjali/', '/contact/']) {
     const html = await load(path);
+    const nav = html.slice(html.indexOf('<nav '), html.indexOf('</nav>') + 6);
 
-    assert.match(html, /href="\/services\/">Services<\/a>/);
-    assert.match(html, /href="\/story\/">Tony&#x27;s story<\/a>/);
-    assert.match(html, /href="\/amjali\/">At My Job And Loving It<\/a>/);
-    assert.match(html, /href="\/contact\/">Contact<\/a>/);
-    assert.match(html, /href="\/contact\/#booking">Start a project/);
+    assert.match(nav, /href="\/">Home<\/a>/);
+    assert.match(nav, /href="\/podcast\/">Podcast<\/a>/);
+    assert.match(nav, /href="\/contact\/#your-story">Tell Your Story<\/a>/);
+    assert.match(nav, /href="\/amjali\/">About<\/a>/);
+    assert.match(nav, /href="\/story\/">Tony<\/a>/);
+    assert.match(nav, /href="\/amjali\/#collection">Collection · Coming Soon<\/a>/);
+    assert.doesNotMatch(nav, />Services<\/a>|>Speaking<\/a>/);
   }
 });
 
 test('sitemap publishes exactly the approved route-led pages', async () => {
   const xml = await load('/sitemap.xml');
-  const expected = ['/', '/services/', '/speaking/', '/story/', '/amjali/', '/contact/'];
+  const expected = ['/', '/podcast/', '/amjali/', '/story/', '/services/', '/speaking/', '/contact/'];
 
   for (const path of expected) {
     const suffix = path === '/' ? '/' : path;
-    assert.match(xml, new RegExp(`<loc>https://www\\.tonyclyburn\\.com${suffix}</loc>`));
+    assert.match(xml, new RegExp(`<loc>https://atmyjobandlovingit\\.com${suffix}</loc>`));
   }
 
   assert.equal((xml.match(/<url>/g) ?? []).length, expected.length);
